@@ -19,8 +19,10 @@ generate
 exit "$1"
 }
 
-input_target="src"
-output_target="out"
+dir="$(dirname "$(realpath "$0")")"
+
+input_target="$dir/../src"
+output_target="$dir/.."
 [ -d "$output_target" ] || mkdir "$output_target"
 
 main() {
