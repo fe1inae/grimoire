@@ -1,0 +1,31 @@
+- hello world
+can do stuffs,
+
+like toilet/figlet
+<run toilet -f 'ANSI Shadow'>
+Hello
+World
+</run>
+
+i also like <a href="https://arthursonzogni.com/Diagon/">https://arthursonzogni.com/Diagon/</a>
+<run diagon GraphPlanar>
+if -> "then A" -> end
+if -> "then B" -> end
+end -> loop -> if
+</run>
+
+formatting preserved so can do ascii
+                         ,
+  ,-.       _,---._ __  / \
+ /  )    .-'       `./ /   \
+(  (   ,'            `/    /|
+ \  `-"             \'\   / |
+  `.              ,  \ \ /  |
+   /`.          ,'-`----Y   |
+  (            ;        |   '
+  |  ,-.    ,-'         |  /
+  |  | (   |        hjw | /
+  )  |  \  `.___________|/
+  `--'   `--'
+
+uwu

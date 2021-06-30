@@ -1,2 +1,0 @@
-# ulthar.cat
-Intro site.

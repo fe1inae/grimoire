@@ -1,0 +1,83 @@
+
+    <!doctype html>
+    <title>felinae</title>
+    <meta charset=utf-8>
+
+    <style>
+    body {
+        overflow-y: scroll;
+    	font: 16px monospace, monospace;
+    }
+
+    div {
+        text-align: left;
+        white-space: pre-wrap;
+        margin: auto 32px;
+    }
+
+    body {
+    	background: #111111;
+    	color: #eeeeee;
+    }
+
+    a {
+    	color: #eeeeee;
+    }
+
+    hr {
+        color: #eeeeee;
+    }
+
+    .header {
+        margin: 0 auto;
+    }
+    </style>
+
+    <div>
+    <div class="header">felinae • <a href="index.html">home</a> • <a href="https://github.com/fe1inae">github</a> • <a href="mailto:felinae@ulthar.cat">email</a></div>
+<hr>██   ██ ███████ ██      ██       ██████  
+██   ██ ██      ██      ██      ██    ██ 
+███████ █████   ██      ██      ██    ██ 
+██   ██ ██      ██      ██      ██    ██ 
+██   ██ ███████ ███████ ███████  ██████  
+                                         
+                                         
+
+┌─────┐┌─────────┐┌─────┐     
+│socks││underwear││shirt│     
+└┬────┘└┬─┬──────┘└┬─┬──┘     
+ │      │┌▽─────┐  │┌▽───────┐
+ │      ││pants │  ││tie     │
+ │      │└┬──┬──┘  │└┬───────┘
+┌▽──────▽─▽┐┌▽─────▽┐│        
+│shoes     ││belt   ││        
+└──────────┘└┬──────┘│        
+┌────────────▽───────▽┐       
+│jacket               │       
+└─────────────────────┘       
+
+┌──┬─────────────────────────────────────────────────────────────┐
+│1 │if [ -d "$input_target" ]; then                              │
+│2 │    for file in "$input_target"/*; do                        │
+│3 │        out="$file"                                          │
+│4 │        if [ -d "$output_target" ]; then                     │
+│5 │            out="${out##*/}"                                 │
+│6 │            out="${out%%.txt}"                               │
+│7 │            parse_file "$file" > "$output_target/${out}.html"│
+│8 │        elif [ -f "$output_target" ]; then                   │
+│9 │            parse_file "$file" > "${out}.html"               │
+│10│        fi                                                   │
+│11│    done                                                     │
+│12│elif [ -f "$input_target" ]; then                            │
+│13│    out="${out%%.txt}"                                       │
+│14│    parse_file "$input_target" "${out}.html"                 │
+│15│else                                                         │
+│16│    usage 1                                                  │
+│17│fi                                                           │
+└──┴─────────────────────────────────────────────────────────────┘
+<hr>
+\    /\
+ )  ( ')
+(  /  )
+ \(__)|
+</div>

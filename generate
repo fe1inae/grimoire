@@ -1,0 +1,148 @@
+#!/bin/sh -e
+#shellcheck shell=dash
+#
+#      \    /\
+#       )  ( ')
+#      (  /  )
+#       \(__)|
+# <felinae@ulthar.cat>
+#
+# REQUIRES: diagon
+# 
+
+usage() {
+    printf '%s' "\
+USAGE:
+
+generate
+"
+exit "$1"
+}
+
+input_target="src"
+output_target="out"
+[ -d "$output_target" ] || mkdir "$output_target"
+
+main() {
+    for file in "$input_target"/*; do
+        out="$file"
+        if [ -d "$output_target" ]; then
+            out="${out##*/}"
+            out="${out%%.txt}"
+            parse_file "$file" > "$output_target/${out}.html"
+        fi
+    done
+
+    create_home > "$output_target/index.html"
+}
+
+
+create_home() {
+    add_pre
+
+    for file in "$input_target"/*; do
+        read -r title < "$file"
+        title="${title##- }"
+        file="${file##*/}"
+        file="${file%%.txt}"
+        printf '<a href="%s.html">%s.txt</a>: %s\n' "$file" "$file" "$title"
+    done
+
+    add_post
+}
+
+
+parse_file() {
+    add_pre
+
+    in_block='false'
+    skip_first="true"
+    while IFS= read -r line; do
+        if [ "$skip_first" = "true" ]; then
+            skip_first="false"
+            continue
+        fi
+        if [ "$in_block" = 'false' ]; then
+            case "$line" in
+                '<run'*)
+                    in_block='true'
+                    cmd="${line##<run}"
+                    cmd="${cmd%%>}"
+                    str=""
+                    ;;
+                *)
+                    printf '%s\n' "$line"
+                    ;;
+            esac
+        elif [ "$in_block" = 'true' ]; then
+            case "$line" in
+                '</run>')
+                    printf '%s\n' "$(printf '%s' "$str" | eval "$cmd")"
+                    in_block='false'
+                    ;;
+                *)
+                    str="$str$(printf '%s' "$line")
+" # HACK
+                    ;;
+            esac
+        fi
+    done < "$1"
+
+    add_post
+}
+
+add_pre() {
+    printf '%s' "
+    <!doctype html>
+    <title>felinae</title>
+    <meta charset=utf-8>
+
+    <style>
+    body {
+        overflow-y: scroll;
+    	font: 16px monospace, monospace;
+    }
+
+    div {
+        text-align: left;
+        white-space: pre-wrap;
+        margin: auto 32px;
+    }
+
+    body {
+    	background: #111111;
+    	color: #eeeeee;
+    }
+
+    a {
+    	color: #eeeeee;
+    }
+
+    hr {
+        color: #eeeeee;
+    }
+
+    .header {
+        margin: 0 auto;
+    }
+    </style>
+
+    <div>
+    "
+    printf '<div class="header">felinae • <a href="index.html">home</a> • <a href="https://github.com/fe1inae">github</a> • <a href="mailto:felinae@ulthar.cat">email</a></div>\n'
+    printf '<hr>'
+}
+
+add_post() {
+    printf '<hr>'
+    printf '%s' "
+\\    /\\
+ )  ( ')
+(  /  )
+ \\(__)|
+"
+    printf '</div>'
+
+}
+
+main "$@"
