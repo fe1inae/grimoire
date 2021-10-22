@@ -84,7 +84,7 @@
 
    (local page     (string.gsub (template:read :a) "{CONTENTS}" contents))
 
-   (local out (string.gsub (i:gsub "^src" "out/html")
+   (local out (string.gsub (i:gsub "^src" "docs")
                            "%.fnl$" ".html"))
 
    (create-dir (out:gsub "[^/]+$" ""))
