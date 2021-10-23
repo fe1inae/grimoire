@@ -45,7 +45,7 @@
  "<br><br>")
 
 (fn dsl.html.title [str]
- (string.format "<h1>%s</h1>" str))
+ (string.format "<h1>%s</h1><p>-------------------------------------------------------------------------------</p>" str))
 
 (fn dsl.html.link [str]
  (string.format "[<a href=\"%s\">link</a>] %s" str str))
