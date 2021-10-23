@@ -1,20 +1,37 @@
 <html>
-    <head>
-        <style>
-            body {
-                overflow-y: scroll;
-                font: 16px monospace,monospace;
-                background: #221b22;
-                color: #fbc6fb;
-                width: 79ch;
-                text-align: justify;
-            }
-            a {
-                color: #fbc6fb;
-            }
-        </style>
-    </head>
-    <body>
-        first diary entry maybe, unsure if im going to use this but its there if i want. not sure if i have any diary or jorunal style posts im comfortable sharing on the wide open internet, but we shall see. tech diary most likely rather than anything personal.<br><br>writing this was fun, lisp DSLS are neat. learning lua more also, controlling environments is a hurdle that bugged me before, but i like luas implementation of it know that i (roughly) understand how it works. nice and simple, how it should be.<br><br>need to make some more output formats, plaintext, gopher (+need research for that), but other than that and im sure plenty of bugs ill stumble upon the core should be finished for my site generator thingy. prob going to end up having a utils file that is exported to all fnl pages, should make things easier.<br><br>also not super happy with how templating is done, current is just super bare bones basically just for smacking some css and html boilerplate on. not sure how much to handle in the processes stage vs the source file itself.<br><br>meh regardless, id say experiment sucessfull. hopefully with this i can hold myself to projects more also, and have a proper centralised place for notes and stuff. need to make some helper aliases to write new posts in schizo and diary, and new project maybe. still some stuff to do but like i said, solid start i think, hopefully no start from scratch issue comes up :p
-    </body>
+	<head>
+		<script src="https://utteranc.es/client.js"
+			repo="fe1inae/fe1inae.github.io"
+			issue-term="pathname"
+			label="comments"
+			theme="github-dark"
+			crossorigin="anonymous"
+			async>
+		</script>
+		<style>
+			body {
+				overflow-y: scroll;
+				font-family: Unifont, monospace;
+				font-size: 16px;
+				background: #221b22;
+				color: #fbc6fb;
+				width: 79ch;
+				text-align: justify;
+			}
+			h1 {
+			   font-size: 16px;
+			}
+			a {
+				color: #fbc6fb;
+			}
+			pre {
+				font-size: 16px;
+				font-family: Unifont, monospace;
+				line-height: 1;
+			}
+		</style>
+	</head>
+	<body>
+		first diary entry maybe, unsure if im going to use this but its there if i want. not sure if i have any diary or jorunal style posts im comfortable sharing on the wide open internet, but we shall see. tech diary most likely rather than anything personal.<br><br>writing this was fun, lisp DSLS are neat. learning lua more also, controlling environments is a hurdle that bugged me before, but i like luas implementation of it know that i (roughly) understand how it works. nice and simple, how it should be.<br><br>need to make some more output formats, plaintext, gopher (+need research for that), but other than that and im sure plenty of bugs ill stumble upon the core should be finished for my site generator thingy. prob going to end up having a utils file that is exported to all fnl pages, should make things easier.<br><br>also not super happy with how templating is done, current is just super bare bones basically just for smacking some css and html boilerplate on. not sure how much to handle in the processes stage vs the source file itself.<br><br>meh regardless, id say experiment sucessfull. hopefully with this i can hold myself to projects more also, and have a proper centralised place for notes and stuff. need to make some helper aliases to write new posts in schizo and diary, and new project maybe. still some stuff to do but like i said, solid start i think, hopefully no start from scratch issue comes up :p
+	</body>
 </html>
