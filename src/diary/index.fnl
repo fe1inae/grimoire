@@ -10,5 +10,6 @@
 
 (page
  (title "felinae's diary")
+ "mainly for me to go back and read, not much deep personal feelings mostly circular computer rants"
  (list
   (list-files "src/diary")))
