@@ -3,9 +3,7 @@
 ;; DSL TABLE
 ;; ---------
 
-(local dsl {:html   _G
-            :gopher _G
-            :text   _G})
+(local dsl {:html _G})
 ;; UTILS
 ;; -----
 (local lfs (require :lfs))
@@ -84,7 +82,7 @@
 
    (local page     (string.gsub (template:read :a) "{CONTENTS}" contents))
 
-   (local out (string.gsub (i:gsub "^src" "docs")
+   (local out (string.gsub (i:gsub "^src" "out/html")
                            "%.fnl$" ".html"))
 
    (create-dir (out:gsub "[^/]+$" ""))
