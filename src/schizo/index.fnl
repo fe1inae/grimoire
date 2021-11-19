@@ -10,6 +10,6 @@
 
 (page
  (title "felinae's schizo rants")
- "scattered thoughts or half asleep scrambling for words"
+ "topic focused spews, some messy diary entires"
  (list
   (list-files "src/schizo")))
