@@ -6,7 +6,6 @@
  "index"
  (list
   (gopage "./art/index.fnl")
-  (gopage "./diary/index.fnl")
   (gopage "./project/index.fnl")
   (gopage "./schizo/index.fnl")
   (gopage "./study/index.fnl"))
