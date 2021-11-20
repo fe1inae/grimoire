@@ -1,4 +1,4 @@
-;;/usr/bin/env fennel
+#!/usr/bin/env fennel
 
 ;; DSL TABLE
 ;; ---------
