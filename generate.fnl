@@ -44,7 +44,7 @@
   :<br><br>)
 
 (fn dsl.html.title [str]
-  (string.format "<h1>%s</h1><p>-------------------------------------------------------------------------------</p>"
+  (string.format "<h1>%s</h1><hr>"
                  str))
 
 (fn dsl.html.link [str]
