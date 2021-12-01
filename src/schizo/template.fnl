@@ -1,3 +1,2 @@
-(page
- "hi"
- (nl))
+(page :hi (nl))
+

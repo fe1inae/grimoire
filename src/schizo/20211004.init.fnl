@@ -7,3 +7,4 @@
       "also not super happy with how templating is done, current is just super bare bones basically just for smacking some css and html boilerplate on. not sure how much to handle in the processes stage vs the source file itself."
       (nl)
       "meh regardless, id say experiment sucessfull. hopefully with this i can hold myself to projects more also, and have a proper centralised place for notes and stuff. need to make some helper aliases to write new posts in schizo and diary, and new project maybe. still some stuff to do but like i said, solid start i think, hopefully no start from scratch issue comes up :p")
+
