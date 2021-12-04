@@ -1,7 +1,7 @@
 (page (title "felinae's grimoire")
       "i am fel, varied interest programmer who hops focus before she can accomplish anything useful"
       (nl)
-      "interests currently (20211121) include but are not limited to: s-expressions, jit compilers, source control, and operating system design."
+      "interests currently include but are not limited to:" (nl) "s-expressions, jit compilers, source control, and operating system design."
       (nl) :index (list (gopage :./project/index.fnl)
                         (gopage :./diary/index.fnl))
       ;;(gopage :./art/index.fnl) 
