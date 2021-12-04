@@ -10,6 +10,6 @@
                       (> a b)))
   (table.unpack files))
 
-(page (title "felinae's schizo rants") "messy tech diary of varying quality"
-      (list (list-files :src/schizo)))
+(page (title "felinae's diary posts") "messy tech diary of varying quality"
+      (list (list-files :src/diary)))
 

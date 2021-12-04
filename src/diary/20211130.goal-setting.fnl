@@ -6,4 +6,5 @@
                    ". provides good practice and im curious about a lot of structures such as radix trees and ropes")
                (.. (bold "give full try to janet or chicken")
                    ". i like fennel a lot, but its lacking compared to what i want ideal, should give some other langs a real try, at least until personal is complete :p"))
-  "need to hold myself to these, and actually do things. id be a win if i did one of these tbh, im slow. also seems to be roughly sorted in priority, data structures and lisp interp about same prob")
+      "need to hold myself to these, and actually do things. id be a win if i did one of these tbh, im slow. also seems to be roughly sorted in priority, data structures and lisp interp about same prob")
+

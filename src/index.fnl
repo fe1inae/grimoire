@@ -1,14 +1,13 @@
 (page (title "felinae's grimoire")
       "i am fel, varied interest programmer who hops focus before she can accomplish anything useful"
       (nl)
-      "this is my personal site which currently consists mostly of schizo rants about technology, but i plan to use it for more formal write-ups if i ever get around to that"
-      (nl)
-      "interests currently (20211121) include: s-expressions, jit compilers, source control, and operating system design."
-      (nl) :index
-      (list (gopage :./art/index.fnl) (gopage :./project/index.fnl)
-            (gopage :./schizo/index.fnl) (gopage :./study/index.fnl))
+      "interests currently (20211121) include but are not limited to: s-expressions, jit compilers, source control, and operating system design."
+      (nl) :index (list (gopage :./project/index.fnl)
+                        (gopage :./diary/index.fnl))
+      ;;(gopage :./art/index.fnl) 
+      ;;(gopage :./study/index.fnl)
       :repos (list (link "https://git.ulthar.cat") (link "https://sr.ht/~fel")
-                  (link "https://github.com/fe1inae")) :contact
+                   (link "https://github.com/fe1inae")) :contact
       (list (link "mailto:felinae@ulthar.cat")
             (link "https://matrix.to/#/@fe1inae:matrix.org")))
 
