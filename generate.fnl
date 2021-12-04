@@ -83,7 +83,7 @@
         (local contents (fennel.dofile i [:env dsl.html]))
         (local template (io.open :template/template.html :r))
         (local page (string.gsub (template:read :a) "{CONTENTS}" contents))
-        (local out (string.gsub (i:gsub :^src :out/htdocs) "%.fnl$" :.html))
+        (local out (string.gsub (i:gsub :^src :out/html) "%.fnl$" :.html))
         (create-dir (out:gsub "[^/]+$" ""))
         (let [outfile (io.open out :w)]
           (outfile:write page)))))
