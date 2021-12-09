@@ -11,13 +11,13 @@ os/kernel/distro
 - [openbsd](https://www.openbsd.org/)
   \- secure and well desgined unix
 - [9front](http://9front.org/)
-  \- plan9 but still developedcompositors
+  \- plan9 but still developed
 
 compositors/wms
 ===============
 
 - [wlroots](https://gitlab.freedesktop.org/wlroots/wlroots)
-  \- makes writing wayland compositors feasible, has many standardarized
+  \- makes writing wayland compositors feasible, has many standardized
   protocols
 - [river](https://github.com/riverwm/river/)
   \- bspwm/dwm-esque for wayland
@@ -98,4 +98,4 @@ misc
 ====
 
 - [keyd](https://github.com/rvaiya/keyd)
-  \- keybard remapping daemon through kernel (udev/uinput)
+  \- keyboard remapping daemon through kernel (udev/uinput)
