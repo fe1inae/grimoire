@@ -1,7 +1,0 @@
-#!/bin/sh
-
-tmp=$(mktemp)
-lr -t 'name ~~ "*.fnl"' src | while read -r line; do
-	fnlfmt "$line" > "$tmp"
-	cat "$tmp" > "$line"
-done

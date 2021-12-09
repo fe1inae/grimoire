@@ -1,0 +1,6 @@
+[submodule "filter/gemini"]
+	path = filter/gemini
+	url = https://github.com/kr1sp1n/gemini-pandoc-lua-filter/
+[submodule "filter/misc"]
+	path = filter/misc
+	url = https://github.com/pandoc/lua-filters
