@@ -10,11 +10,16 @@ FILTERS= \
 all: generate
 	
 generate: $(FILTERS)
-	rm -r out
+	@rm -rf out
 	@sh bin/generate.sh
 
 diary:
 	@sh bin/new_diary.sh
+
+serve:
+	@git pull -f
+	@rm -rf out
+	@sh bin/generate.sh
 
 # RULES
 # =====
@@ -37,6 +42,5 @@ deps:
 	@git submodule update
 
 clean:
-	rm -f $(FILTERS)
 	git clean -Xdf
 
