@@ -1,45 +1,57 @@
+# SETTINGS
+# --------
+
+MANDOC_OPTS= \
+	-Ios=ulthar.cat \
+	-Kutf-8 \
+	-mdoc 
+
 # VARIABLES
-# =========
+# ---------
 
-FILTERS= \
-	filter/lua/fix-links.lua
+IN=\
+	$(shell find src/ -type f -name '*.mdoc') \
+	$(shell find src/ -type f -name '*.sh')
 
-# ACTIONS
-# =======
+MIDDLE=\
+	$(IN:src/%.mdoc=tmp/%.mdoc) \
+	$(IN:src/%.sh=tmp/%.mdoc)
 
-all: generate
+OUT=\
+	$(MIDDLE:tmp/%.mdoc=out/html/%.html) \
+	$(MIDDLE:tmp/%.mdoc=out/plain/%.txt)
+
+# GENERATORS
+# ----------
+
+all: $(IN) $(MIDDLE) $(OUT)
+
+tmp/%.mdoc: src/%.sh
+	mkdir -p $(dir $(@))
+	sh $(<) > $(@)
+
+tmp/%.mdoc: src/%.mdoc
+	mkdir -p $(dir $(@))
+	cp -f $(^) $(@)
+
+out/html/%.html: tmp/%.mdoc
+	mkdir -p $(dir $(@))
+	cp -f css/style.css out/html/style.css
+	sed 's/\.EXT/.html/g' $(^) \
+		| mandoc $(MANDOC_OPTS) \
+			-Thtml \
+			-Ostyle=/style.css \
+			>> $(@)
 	
-generate: $(FILTERS)
-	@rm -rf out
-	@sh bin/generate.sh
+out/plain/%.txt: tmp/%.mdoc
+	mkdir -p $(dir $(@))
+	sed 's/\.EXT/.txt/g' $(^) \
+		| mandoc $(MANDOC_OPTS) \
+			-Tutf8 \
+			| col -bx > $(@)
 
-diary:
-	@sh bin/new_diary.sh
-
-serve:
-	@git pull -f
-	@rm -rf out
-	@sh bin/generate.sh
-
-# RULES
-# =====
-
-
-
-# FILTERS
-# =======
-
-filter/lua/%.lua: filter/fnl/%.fnl
-	@mkdir -p filter/lua
-	fennel -c $< > $@
-
-# SETUP
-# =====
-
-deps:
-	@git submodule init
-	@git submodule sync
-	@git submodule update
+# MISC
+# ----
 
 clean:
 	git clean -Xdf

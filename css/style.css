@@ -1,0 +1,44 @@
+/* general */
+body {
+    font-family: unifont, monospace;
+    font-size: 16px;
+
+	background-color: #1e1e1e;
+	color: #e1e1e1;
+
+	width: 79ch;
+}
+
+h1 {
+    font-size: inherit;
+}
+
+a {
+	color: #7676e5;
+}
+
+/* formatting */
+
+section.Sh h1 a {
+    color: #e1e1e1;
+    text-decoration: none;
+}
+
+section.Sh p {
+    margin-left: 5ch;
+}
+
+
+table.head {
+    width: 100%;
+    border-bottom: 1px dotted #e1e1e1;
+}
+td.head-ltitle { text-align: left; }
+td.head-vol {text-align: center; }
+td.head-rtitle { text-align: right; }
+
+table.foot { width: 100%;
+    border-top : 1px dotted #e1e1e1;
+}
+td.foot-date {text-align: left; }
+td.foot-os { text-align: right; }
