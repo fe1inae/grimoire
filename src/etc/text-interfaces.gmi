@@ -13,8 +13,8 @@ vt100 sequences, or adds significant new possibilities.
 
 ## sub pages
 
-=> plan9-text.ext
-=> emacs-text.ext
+=> plan9-text.{{ext}}
+=> emacs-text.{{ext}}
 
 ## terminal-esque
 

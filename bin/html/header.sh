@@ -1,12 +1,13 @@
 #!/bin/sh
 set -eu
 
+f="$(printf '%s\n' "$1" | sed 's/\.gmi/.html/')"
+
 printf '<table class="header">'
 printf '<tr>'
 printf '<th>'
-target="/${1}"
 IFS='/'
-set -- ${@}
+set -- ${f}
 printf '/<a href="/">root</a>'
 for i in "${@}"; do
 	stack="${stack:-""}/${i}"

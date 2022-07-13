@@ -14,9 +14,9 @@ in my head.
 
 # pages
 
-=> /contacts.ext  contacts
-=> /repos.ext     git urls
-=> /bookmarks.ext bookmarks
+=> /contacts.{{ext}}  contacts
+=> /repos.{{ext}}     git urls
+=> /bookmarks.{{ext}} bookmarks
 
 => /doc/ blogs/rants/gemlog
 => /etc/ miscellaneous posts

@@ -11,7 +11,7 @@ for f in *; do
 	*.gmi)
 		printf '%s %s %s\n' \
 			"$(sed -n '/^[0-9]/ {s/^\([^ ]*\).*/\1/p; q'} "$f")" \
-			"${f%.gmi}.ext" \
+			"${f%.gmi}.{{ext}}" \
 			"$(sed -n '/^#/ {s/^# \(.*\)/\1/p; q}' "$f")"
 		;;
 	esac
@@ -21,5 +21,5 @@ done | sort -nr | while read -r line; do
 	url="$2"
 	shift; shift
 	desc="$@"
-	printf '=> protocol://ulthar.cat/doc/%s %s: %s\n' "$url" "$time" "$desc"
+	printf '=> {{protocol}}://ulthar.cat/doc/%s %s: %s\n' "$url" "$time" "$desc"
 done
