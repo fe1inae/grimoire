@@ -1,17 +1,4 @@
-ulthar.cat - personal site/grimoire
-
-TODO
-	embed pictures somehow?
-	handle long names in sidebar
-	polish up scripts, a lot (and merge mkheader + make maybe)
-	clean up css
-
-ARCHITECTURE
-	processed in stages, source for most pages are in `src`.
-	detects changes to minimize work done per run, 
-	touch files or add -f to force updating.
-
-src+etc -> tmp -> ${WWW:-test}
+personal site/grimoire
 
 (\
 \'\

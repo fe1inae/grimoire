@@ -1,0 +1,37 @@
+# lol
+
+"Die? I should say not, dear fellow. No Barrymore would allow such a
+conventional thing to happen to him."	-- John Barrymore's dying words
+flowchart, n. & v.:[From flow "to ripple down in rich profusion, as hair" + chart"a cryptic hidden-treasure map designed to mislead the uninitiated."]1. n. The solution, if any, to a class of Mascheroni constructionproblems in which given algorithms require geometrical representationusing only the 35 basic ideograms of the ANSI template. 2. n. Neronicdoodling while the system burns. 3. n. A low-cost substitute forwallpaper. 4. n. The innumerate misleading the illiterate. "Athousand pictures is worth ten lines of code." -- The Programmer'sLittle Red Vade Mecum, Mao Tse T'umps. 5. v.intrans. To produceflowcharts with no particular object in mind. 6. v.trans. To obfuscate(a problem) with esoteric cartoons.	-- Stan Kelly-Bootle, "The Devil's DP Dictionary"
+
+a
+b
+c
+d
+f
+
+hello wolrd!
+u r dumb
+
+> hello world this is a fuck
+i fold these because it is dumb
+
+lol
+=> hello
+=> goodbye
+this works?
+* a 
+* b
+
+* a b c
+
+```
+this
+should
+not
+be
+formatted
+!
+```
+
+aaaaaaa

@@ -1,45 +1,20 @@
-.POSIX:
-.SUFFIXES:
-.PHONY: all force test check fmt
+.PHONY: all clean
 
-WWW=$(PUBLIC)/www
-REPO=/home/fel/git
+WWW=${HOME}/var/public/www
 
-E= \
-	REPODIR=$(REPO) \
-	URL=https://ulthar.cat \
-	GITURL=https://ulthar.cat/git
+include Makefile.in
 
-all:
-	@$(E) sh bin/html/generate.sh -t $(WWW)/html
-	@$(E) sh bin/gmni/generate.sh -t $(WWW)/gmni
+build: ${SRC}
+	@rm -rf tmp
 
-force:
-	@$(E) sh bin/html/generate.sh -t $(WWW)/html -f
-	@$(E) sh bin/gmni/generate.sh -t $(WWW)/gmni -f
-
-test:
-	@$(E) sh bin/html/generate.sh -t test/html -v -f
-	@$(E) sh bin/gmni/generate.sh -t test/gmni -v -f
+push: all
+	rm -rf ${WWW}/*
+	cp -rf build/* ${WWW}
 	
-check:
-	@shellcheck                     \
-		-s sh                       \
-		-e 2154,1090,2310           \
-		-o add-default-case         \
-		-o avoid-nullary-conditions \
-		-o check-set-e-suppressed   \
-		-o deprecate-which          \
-		-o quote-safe-variables     \
-		-o require-variable-braces  \
-		bin/lib.sh bin/gmni/* bin/html/*
-	
-fmt:
-	@shfmt        \
-		-ln posix \
-		-i 0      \
-		-bn       \
-		-sr       \
-		-kp       \
-		-w        \
-		bin/lib.sh bin/gmni/* bin/html/*
+
+include mk/default.mk
+include mk/gemini.mk
+include mk/html.mk
+
+Makefile.in:; @sh bin/generate.sh > Makefile.in
+clean:; -rm -rf tmp build Makefile.in

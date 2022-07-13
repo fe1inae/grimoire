@@ -119,7 +119,7 @@ printf '%s' "$DEFAULT"
 
 printf '%s┌' "$FADE"
 for i in $(seq 1 $(($MAXLEN-2))); do
-    printf '─'
+	printf '─'
 done
 printf '┐%s\n' "$RESET"
 

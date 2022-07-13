@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
 body {
 	font-family: monospace;
 	background-color: #fff8ff;
 	color: #222222;
+	max-width: 80ch;
+	margin: auto;
+	padding-left: 1ch;
+	padding-right: 1ch;
+	margin-top: 1em;
 }
 
 a {
@@ -15,81 +20,26 @@ a {
 	text-decoration: none;
 }
 
-table.head,
-table.foot {
-	width: 100%;
-}
+blockquote { color: #a0a0a0; }
+blockquote:before { content: "“"; }
+blockquote:after  { content: "”"; }
 
-article {
-	margin-left: 23ch;
-	margin-right: 1ch;
-}
+pre { color: #555555; }
 
-.sidebar {
-	height: 100%;
-	width: 20ch;
-	position: fixed;
-	padding-right: 1ch;
-	border-right: 1px solid #222222;
-}
+::marker { content: "• "; }
 
-td.head-rtitle,
-td.foot-os {
-	text-align: right; 
-}
-
-td.head-vol {
-	text-align: center; 
-}
-
-.Nd,
-.Bf,
-.Op {
-	display: inline; 
-}
-
-.Pa,
-.Ad {
-	font-style: italic; 
-}
-
-.Ms {
-	font-weight: bold; 
-}
-
-.Bl-diag > dt {
-	font-weight: bold; 
-}
-
-/* colors */
 @media(prefers-color-scheme:dark){
 	body {
 		background-color: #222222;
 		color: #fff8ff;
 	}
 	
-	a {
-		color: #bebef2;
-	}
-	
-	.sidebar {
-		border-right: 1px solid #fff8ff;
-	}
+	a   { color: #bebef2; }
+	pre { color: #d5d5d5; }
 }
 
-code.Nm,
-.Fl,
-.Cm,
-.Ic,
-code.In,
-.Fd,
-.Fn,
-.Cd {
-	font-weight: bold;
-	font-family: inherit; 
-}
 
-	</style>
-	<title>ulthar cat</title>
+</style>
+<title>ulthar cat</title>
 </head>
 <body>
