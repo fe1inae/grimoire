@@ -1,0 +1,16 @@
+GIT_ROOT="/home/fel/git"
+
+README_LIST="
+readme
+.readme
+readme.txt
+readme.md
+readme.gmi
+readme.html
+README
+.README
+README.txt
+README.md
+README.gmi
+README.html
+"

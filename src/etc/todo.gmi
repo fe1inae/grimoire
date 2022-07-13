@@ -1,0 +1,9 @@
+# todo
+(fel jargon & incoherencies warning)
+
+* patch astronaut, tab/ret bind
+* /git add difs - cleanup? did shit implementation of
+
+
+
+* migrate git to better than shell scripts
