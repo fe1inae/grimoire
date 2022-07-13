@@ -16,14 +16,14 @@ but you never know when that standard will drastically change. good to aim low.
 
 this doesnt mean to conclude that, per se, a "minimalist" website is good
 enough. that builds on many, many complex technologies just to render some
-text. its quite uneccesary, in an extreme scenario. if we accept the black box
+text. its quite unnecessary, in an extreme scenario. if we accept the black box
 to do all our tasks without fail, what will we do when it does fail?
 
-realisitcally, i dont believe computers are required for humanity to thrive,
+realistically, i dont believe computers are required for humanity to thrive,
 at least to a reasonable extent. arguably they have been worse overall for us,
 but regardless, thats not fun nor optimistic.
 
-fundemental tasks
+fundamental tasks
 -----------------
 
 - computation
@@ -36,7 +36,7 @@ that would otherwise take possibly orders of magnitude greater time.
 computers should be good at what humans lack.
 
 of course, theres something to be said in the entertainment value. not netflix,
-but the theortical mathematics of computer science. that will always be desired
+but the theoretical mathematics of computer science. that will always be desired
 to be explored, at least from some subsection of humanity.
 
 what is required
@@ -48,18 +48,18 @@ loop, every n seconds or hours. watering plants if it didnt rain that day,
 logging information on your surroundings while you are sleeping or doing
 another task.
 
-keep in mind that computation doesnt neccesarly require circuts and resistors,
+keep in mind that computation doesnt unnecessary  require circuits and resistors,
 at least in my definition. anything that follows clear logical flows to
-transform an input to an output could be called a computer or computiation.
+transform an input to an output could be called a computer or computation.
 gears or other physical objects can create a similar, ableit generally slower,
 form of computation to electrics.
 
 contact with other people is largely required, with sharing and receiving
 information arguably the most vital element in surviving, at bare minimum
-psycologically. computers can streamline this process, given a medium.
+psychologically. computers can streamline this process, given a medium.
 
 there are numerous protocols for low tech communication between computers,
-perhaps most humously [RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549),
+perhaps most humorously [RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549),
 which describes a network protocol purely using carrier pidgens. a more
 reasonable proposal consists of a mesh of HAM or similar radios, which already
 overlaps relatively largely with those preparing for collapse.
@@ -76,7 +76,8 @@ XXX (i got bored, more schizorants to come)
 see also
 --------
 
-- http://collapseos.org/
-- https://wiki.xxiivv.com/site/collapse_computing.html
 - http://bootstrappable.org/
+- http://collapseos.org/
+- https://bootstrapping.miraheze.org/wiki/Main_Page
+- https://wiki.xxiivv.com/site/collapse_computing.html
 
