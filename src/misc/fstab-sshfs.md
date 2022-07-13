@@ -22,7 +22,7 @@ newlines for sake of readability.
 
 
 ```
-tr -d '0 <<'EOF'
+tr -d '\t\n' <<'EOF'
 [USER]@[ADDRESS]:[SRC PATH]
         [MOUNT PATH]
         fuse.sshfs
