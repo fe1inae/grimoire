@@ -16,6 +16,7 @@ my poor memory.
 categories
 ----------
 
+[video games](./games/index.md)  
 [virtual machines](./vms/index.md)  
 [programming languages](./langs/index.md)  
 [collapse environments](./collapse/index.md)  
