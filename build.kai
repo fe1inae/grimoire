@@ -44,8 +44,8 @@ rule serve: sh bin/serve.sh
 build serve: serve
 
 default cgit
-build cgit: phony out/html/git out/html/css/cgit.css
-build out/html/git: copy /usr/share/webapps/cgit/cgit
+build cgit: phony out/html/cgi-bin/cgit out/html/css/cgit.css
+build out/html/cgi-bin/cgit: copy /usr/share/webapps/cgit/cgit
 build out/html/css/cgit.css: copy /usr/share/webapps/cgit/cgit.css
 
 # TARGETS

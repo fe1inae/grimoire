@@ -4,7 +4,7 @@ grimoire
 personal site and glue for various things
 
 requires
-- althttpd
+- busybox httpd
 - bubblewrap 
 - cgit
 - chafa

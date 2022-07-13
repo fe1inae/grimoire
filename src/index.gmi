@@ -11,7 +11,7 @@ personal(ized) computing, and simplicity.
 
 # pages
 
-=> https://ulthar.cat/git/ git repos
+=> https://ulthar.cat/cgi-bin/cgit git repos
 => /bookmarks.{{ext}} bookmarks
 
 => /doc/ blogs/rants/gemlog

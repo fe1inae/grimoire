@@ -17,8 +17,9 @@ mandoc
 sed
 sh
 tar
-thttpd
+httpd
 tr
+env
 "
 
 # check dependencies
@@ -52,6 +53,9 @@ done
 	--dev   /dev
 	--proc  /proc
 	--tmpfs /tmp
+	
+	# httpd config
+	--ro-bind ${PWD}/etc/httpd.conf /etc/httpd.conf
 
 	# default
 	--ro-bind ${DEFAULT_IN} ${DEFAULT_OUT}
@@ -60,6 +64,7 @@ done
 	--ro-bind ${GIT_IN}               /var/git
 	--ro-bind ${PWD}/etc/cgit/cgitrc  /etc/cgitrc
 	--ro-bind ${PWD}/etc/cgit/filter  /lib/cgit/filter
+	--ro-bind /usr/share/webapps/cgit /bin/cgit
 	--dir /cache/cgit
 
 	# highlight
@@ -74,11 +79,10 @@ done
 	--new-session
 
 	# run
-	thttpd
-		-D
-		-d ${DEFAULT_OUT}
-		-c /git
-		-p 8002
+	httpd
+		-f      # foreground
+		-p 8002 # port
+		-h /www # chdir
 EOF
 ))
 
