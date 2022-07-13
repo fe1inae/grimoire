@@ -3,14 +3,14 @@
 # VARIABLES
 # =========
 
-DIR=/var/gemini
+DIR?=$(PUBLIC)/gemini
 
 SRC=$(shell find src/ -type f)
 
 OUT=$(SRC:src/%=$(DIR)/%)
 
 MISC=                     \
-	css/fel.png           \
+	etc/fel.png           \
 	$(DIR)/style.css      \
 	$(DIR)/unscii-16.woff
 	
@@ -46,10 +46,10 @@ $(DIR)/%: css/% FRC
 # ====
 
 watch:
-	lr -t 'type == f' css fmt src \
+	lr -t 'type == f' etc fmt src \
 		| rwc | xe -s '$(MAKE)'
 
-css/fel.png: 
+etc/fel.png: 
 	@cp -f $$HOME/pic/art/avatars/FEL_CURRENT.png $(@)
 
 fix:

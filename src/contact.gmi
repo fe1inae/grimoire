@@ -6,8 +6,9 @@
 
 ## irc
 
-=> https://libera.chat fel - libera
-=> https://tilde.chat fel - tilde
+fel - irc.oftc.net
+fel - irc.tilde.chat
+fel - irc.libera.chat
 
 ## fedi
 

@@ -1,5 +1,4 @@
-# FUNCTIONS
-# ---------
+. etc/fetch.env
 
 # VARIABLES
 # ---------
@@ -29,11 +28,11 @@ MSG="
 
  CONTACT  felinae@ulthar.cat
 
- OS      alpine linux edge
- TERM    tmux-256color
- SHELL   busybox ash
- VISUAL  kakoune
- EDITOR  sam -d
+ OS      $OS
+ TERM    $TERM
+ SHELL   $SHELL
+ VISUAL  $VISUAL
+ EDITOR  $EDITOR
 "
 
 # WRITE SHIT
@@ -52,7 +51,7 @@ didder                                          \
 	-p "$COLORS"                                \
 	$DOPTS                                      \
 	-out -                                      \
-	-in "css/fel.png"                           \
+	-in "etc/fel.png"                           \
 	bayer 256 256                               \
 	| chafa                                     \
 		-s "${W}x${H}"                          \
@@ -63,9 +62,9 @@ didder                                          \
 	txtline="$(printf "$MSG" | sed -n "${i}p" | tr -d '\n')"
     txtlen="$(printf '%s' "$txtline" | sed -E 's/\x1b\[[^mK]*[m|K]//g' | wc -m)"
     imglen="$(printf '%s' "$imgline" | sed -E 's/\x1b\[[^mK]*[m|K]//g' | wc -m)"
-    printf '%s %s%s%*s%s\n'                   \
-    	"|"                        \
-    	"$imgline" "$txtline"        \
+    printf '%s %s%s%*s%s\n'                     \
+    	"|"                                     \
+    	"$imgline" "$txtline"                   \
     	"$((MAXLEN-${imglen}-${txtlen}-3))" " " \
     	"|"
 
