@@ -2,25 +2,17 @@
 
 Elaina (felinae) she/her
 
+=> /ass/fel_small.png current avatar
+
 perma lurking adhd computer cat. currently interested in documentation,
 personal(ized) computing, and simplicity.
 
-current main project (if anything could ever be considered that) are:
-
-* an "antisocial" linux flavor and accompanying ecosystem, though not currently
-uploaded anywhere since its so scattered and incomplete. currently mostly just
-in my head.
-* a font
+=> /contacts.{{ext}}  contacts
 
 # pages
 
-=> /contacts.{{ext}}  contacts
 => /repos.{{ext}}     git urls
 => /bookmarks.{{ext}} bookmarks
 
 => /doc/ blogs/rants/gemlog
 => /etc/ miscellaneous posts
-
-# avatar
-
-=> /ass/fel_small.png my current avatar

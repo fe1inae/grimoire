@@ -59,12 +59,53 @@
 		alt = $0
 	else
 		alt = url
-	
+
+	# embed images
 	if (url ~ /\.(png|jpg|jpeg|gif)$/) {
-		printf("<a href=\"%s\"><img src=\"%s\" alt=\"%s\"></a><br>", 
-			url, url, alt)
+		# local file, do extra shit
+		if (url ~ /^\//) {
+			file = "src" url
+
+			# get dimensions
+			CMD = "identify -format \"%[fx:w]x%[fx:h]\" " file
+			CMD | getline size
+			close(CMD)
+			width  = size
+			sub(/x.*$/, "", width)
+			height = size
+			sub(/^.*x/, "", height)
+
+			# base64
+			CMD = "base64 -w 0 " file
+			CMD | getline b64
+			close(CMD)
+
+			# mime type
+			CMD = "file -b --mime-type " file
+			CMD | getline mime
+			close(CMD)
+
+			data = sprintf("data:%s;base64,%s", mime, b64)
+
+			# print image
+			printf( \
+				"<p><a href=\"%s\">" \
+				"<img " \
+					"src=\"%s\" " \
+					"alt=\"%s\" "  \
+					"width=\"%d\" " \
+					"height=\"%d\"/>" \
+				"</a></p>", 
+				url, data, alt, width, height)
+
+		# external
+		} else {
+			printf("<p><a href=\"%s\"><img src=\"%s\" alt=\"%s\"/></a></p>", 
+				url, url, alt)
+		}
+
 	} else {
-		printf("<a href=\"%s\">%s</a><br>", url, alt)
+		printf("<p><a href=\"%s\">%s</a></p>", url, alt)
 	}
 	
 	next
