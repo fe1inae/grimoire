@@ -12,8 +12,8 @@ document {
 	h2 "links",
 	
 	tree {
-		"irc: fel,felinae,fe1inae",
-		"email (rot13): sryvanr@hygune.png",
+		"fedi: fel@mastodon.sdf.org",
+		"email: (rot13)sryvanr@hygune.png",
 	},
 	
 	p {
