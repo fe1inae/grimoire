@@ -26,6 +26,7 @@ create_home() {
 
 	printf '20 text/gemini\r\n'
 	printf '# %s\n' "$name"
+	printf '=> git://ulthar.cat/%s\n' "$repo"
 	printf '\n'
 
 	printf '## readme\n\n'
