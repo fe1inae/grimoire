@@ -1,23 +1,22 @@
-sshfs in fstab
-.H1
+.Sh SSHFS IN FSTAB
 
 it is possible to mount sshfs from fstab, so it will automatically mount on 
 boot. this is quite useful obviously, and i personally use it to mount my nas 
 with my music and media on.
-.PP
+
 firstly, you must make the fuse kernel module actually available from the 
 start, and this can be done by appending 'fuse' into /etc/modules, at least on 
 my alpine install.
-.PP
+
 then you will need to have a no password ssh key setup, which im not going to 
 explain here but isnt hard. whole point is to not want to enter stuff to have 
 it mount, we will inherently have to use this mildly insecure measure, at least 
 while keeping it simple.
-.PP
+
 the format inside /etc/fstab is roughly as follows, split up with newlines for 
 sake of readability.
-.PP
 
+.Bd -literal
 tr -d '\n' <<'EOF'
 [USER]@[ADDRESS]:[SRC PATH] 
 	[MOUNT PATH]
@@ -26,11 +25,10 @@ tr -d '\n' <<'EOF'
 allow_other,default_permissions,uid={id -u},gid={id -g}
 	0 0
 EOF
-.NF
-
-options (poorly) explained
-.H2
-
+.Ed
+.
+.Ss options (poorly) explained
+.Bd -unfilled
 _netdev: makes it a network mount
 follow_symlinks: resolve symlinks while mounting, looks like a regular file
 idmap: map the uid/gid to our ids
@@ -39,4 +37,4 @@ allow_other: allow all users to access, ie our non-root user
 default_permissions: make sshfs use default permissions
 uid: set desired uid
 gid: set desired gid
-.NF
+.Ed

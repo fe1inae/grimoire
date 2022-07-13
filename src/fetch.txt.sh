@@ -22,9 +22,7 @@ MSG="
  NICKNAME  felinae
  PRONOUNS  she/her
 
- REPOS   gemini://ulthar.cat/git/
- GEMINI  gemini://ulthar.cat/
- HTTPS   https://ulthar.cat/
+ REPOS   https://ulthar.cat/git/
 
  CONTACT  felinae@ulthar.cat
 

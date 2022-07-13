@@ -78,9 +78,7 @@ MSG="
 $ME NICKNAME $DEFAULT felinae
 $ME PRONOUNS $DEFAULT she/her
 
-$(BG BE F2 F2)$(FG $BLACK) REPOS  $DEFAULT gemini://ulthar.cat/git/
-$(BG BE F2 BE)$(FG $BLACK) GEMINI $DEFAULT gemini://ulthar.cat/
-$(BG F2 F2 BE)$(FG $BLACK) HTTPS  $DEFAULT https://ulthar.cat/
+$(BG BE F2 F2)$(FG $BLACK) REPOS  $DEFAULT https://ulthar.cat/git/
 
 $(BG A0 E4 E4)$(FG $BLACK) CONTACT $DEFAULT felinae@ulthar.cat
 
