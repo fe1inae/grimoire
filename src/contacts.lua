@@ -19,7 +19,6 @@ document {
 	p {
 		"in general, names will be selected in the following order:",
 		list {
-			1,
 			"fel",
 			"felinae",
 			"fe1inae",
