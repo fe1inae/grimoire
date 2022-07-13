@@ -32,6 +32,13 @@ repository-sort=age
 strict-export=git-daemon-export-ok
 scan-path=/var/git
 
-# cache
+# caching
 cache-root=/cache/cgit
 cache-size=1024
+cache-about-ttl=1
+cache-dynamic-ttl=1
+cache-repo-ttl=1
+cache-root-ttl=1
+cache-scanrc-ttl=5
+cache-snapshot-ttl=5
+cache-static-ttl=10080
