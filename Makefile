@@ -1,4 +1,4 @@
-.PHONY: all fix watch
+.PHONY: all fix watch FRC
 	
 # VARIABLES
 # =========
@@ -19,7 +19,7 @@ MISC=                     \
 
 all: $(OUT) $(MISC)
 
-$(DIR)/%.gmi: src/%.gmi
+$(DIR)/%.gmi: src/%.gmi FRC
 	@mkdir -p $(@D)
 	@cat $(<)                  \
 		| awk -f fmt/shell.awk \
@@ -27,12 +27,12 @@ $(DIR)/%.gmi: src/%.gmi
 		> $(@)
 	@echo $(@)
 
-$(DIR)/%: src/%
+$(DIR)/%: src/% FRC
 	@mkdir -p $(@D)
 	@cp -f $(<) $(@)
 	@echo $(@)
 	
-$(DIR)/%: css/%
+$(DIR)/%: css/% FRC
 	@mkdir -p $(@D)
 	@cp -f $(<) $(@)
 	@echo $(@)
@@ -46,3 +46,5 @@ watch:
 
 fix:
 	$(MAKE)
+
+FRC:

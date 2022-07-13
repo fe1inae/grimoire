@@ -1,4 +1,4 @@
-# 20211216 - gemini
+# gemini
 
 Ive added gemini support to this site! both of my attempts do the same thing
 of weirdly preprocessing mdoc, and trial erroring the output until it looks

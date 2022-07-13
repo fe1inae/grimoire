@@ -1,4 +1,4 @@
-# 20211209 - new site
+# new site
 
 scrapped old site generator and started new, the kinda normal
 pandoc/lua/shell/makefile dealio. i enjoyed writing the fennel one i had

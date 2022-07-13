@@ -4,13 +4,20 @@
 
 felinae – Elaina Thompson (she/her)
 
+perma lurking adhd computer cat
+slowly cultivating an ecosystem of my preferences
+
 ## contact
 
 => mailto:felinae@ulthar.cat
+=> https://nixnet.social/fel
 
 ## pages
 
-=> git/
-=> log/
-=> txt/
-=> etc/
+=> git/ git
+
+=> now/ status
+=> log/ journal
+
+=> etc/ random
+=> txt/ pastebin

@@ -14,9 +14,10 @@ html {
 }
 
 body {
-	white-space: nowrap;
+	margin: auto;
+	max-width: max-content;
 	text-overflow: ellipsis;
-	margin-left: 5ch;
+	white-space: nowrap;
 }
 
 p {

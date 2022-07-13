@@ -1,0 +1,13 @@
+# log
+
+$$$ sh
+for file in src/log/*.gmi; do
+	name="${file##*/}"
+	[ "$name" = "index.gmi" ] &&  continue
+	read title < "$file"
+	printf '=> %s %s\n' \
+		"$name" \
+		"${title### }"
+done | sort -nr
+$$$
+
