@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # correct relative links
-sed 's;(\./;(../plain/;g' - \
+sed "s;(\./;(/git?url=$CGIT_REPO_URL/plain/;g" - \
 	| lowdown -Thtml -o - -
