@@ -34,12 +34,17 @@ $$$
 some shell commands
 ```
 $$$ sh
-set -- this is a shell script that im doing stuff to
-for a in $(seq 1 10); do
-	for b in $(seq 1 $a); do
+set -- a shell script is making this, little sh boi. just shitty example to show you could proper script in
+len="$#"
+for a in $(seq 1 "$len"); do
+	for b in $(seq 1 "$a"); do
+		printf '#'
+	done
+	printf '\\'
+	for b in $(seq 1 "$((len-$a))"); do
 		printf '.'
 	done
-	printf '\\ %s\n' "$1"
+	printf ' %s\n' "$1"
 	shift
 done
 $$$

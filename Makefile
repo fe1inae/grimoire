@@ -1,23 +1,25 @@
-.PHONY: all fix link
-
+.PHONY: all fix watch
+	
 # VARIABLES
 # =========
 
+DIR=/var/gemini
+
 SRC=$(shell find src/ -type f)
 
-OUT=$(SRC:src/%=out/%)
+OUT=$(SRC:src/%=$(DIR)/%)
 
-MISC=out/pkg
+MISC=                     \
+	$(DIR)/pkg            \
+	$(DIR)/style.css      \
+	$(DIR)/unscii-16.woff
 
 # GENERATORS
 # ==========
 
 all: $(OUT) $(MISC)
 
-out/pkg:
-	@ln -snvf /home/fel/pkg/pub $(@)
-
-out/%.gmi: src/%.gmi
+$(DIR)/%.gmi: src/%.gmi
 	@mkdir -p $(@D)
 	@cat $(<)                  \
 		| awk -f fmt/shell.awk \
@@ -25,7 +27,12 @@ out/%.gmi: src/%.gmi
 		> $(@)
 	@echo $(@)
 
-out/%: src/%
+$(DIR)/%: src/%
+	@mkdir -p $(@D)
+	@cp -f $(<) $(@)
+	@echo $(@)
+	
+$(DIR)/%: css/%
 	@mkdir -p $(@D)
 	@cp -f $(<) $(@)
 	@echo $(@)
@@ -33,6 +40,9 @@ out/%: src/%
 # MISC
 # ====
 
+watch:
+	lr -t 'type == f' css fmt src \
+		| rwc | xe -s '$(MAKE)'
+
 fix:
-	rm -rf out
 	$(MAKE)
