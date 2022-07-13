@@ -2,34 +2,51 @@
 set -eu
 
 DEFAULT_IN=${PWD}/out/html
-DEFAULT_OUT=/www/default.website
+DEFAULT_OUT=/www
 
 GIT_IN=/home/fel/git
 
-(exec bwrap $(awk '{ sub(/#.*$/, ""); printf $0 " " }' <<-EOF
-	# libs
-	--ro-bind /lib/ld-musl-x86_64.so.1 /lib/ld-musl-x86_64.so.1
-	--ro-bind /lib/libz.so.1           /lib/libz.so.1
-	--ro-bind /usr/lib/libgcc_s.so.1   /usr/lib/libgcc_s.so.1
-	--ro-bind /usr/lib/liblua-5.3.so.0 /usr/lib/liblua-5.3.so.0
-	--ro-bind /usr/lib/liblua-5.4.so.0 /usr/lib/liblua-5.4.so.0
-	--ro-bind /usr/lib/libmandoc.so    /usr/lib/libmandoc.so
-	--ro-bind /usr/lib/libstdc++.so.6  /usr/lib/libstdc++.so.6
+DYNAMIC="
+awk
+git
+gzip
+highlight
+lowdown
+lzip
+mandoc
+sed
+sh
+tar
+thttpd
+tr
+"
 
-	# minimum utils
-	--ro-bind $(which awk)  /bin/awk
-	--ro-bind $(which sed)  /bin/sed
-	--ro-bind $(which sh)   /bin/sh 
-	--ro-bind $(which tar)  /bin/tar
-	--ro-bind $(which tr)   /bin/tr
-	--ro-bind $(which gzip) /bin/gzip
+# check dependencies
+for f in $DYNAMIC; do
+	if ! command -v "$f" >/dev/null 2>&1; then
+		printf 'error: command %s not found\n' "$f" >&1
+		exit 1
+	fi
+done
 
-	# bin
-	--ro-bind $(which althttpd)  /bin/althttpd
-	--ro-bind $(which lowdown)   /bin/lowdown
-	--ro-bind $(which highlight) /bin/highlight
-	--ro-bind $(which mandoc)    /bin/mandoc
-	--ro-bind $(which mandoc)    /bin/mandoc
+# launch bwrap
+(exec bwrap $(awk '{ sub(/#.*$/, ""); printf("%s ", $0) }' <<-EOF
+	# libraries
+	$(
+		for f in $DYNAMIC; do
+			lib="$(ldd "$(which "${f}")" | awk '{if (NF == 2) print $1; else print $3 }')"
+			for l in $lib; do
+				printf '--ro-bind %s %s\n' "$l" "$l"
+			done
+		done | sort | uniq
+	)
+
+	# binaries
+	$(
+		for f in $DYNAMIC; do
+			printf '--ro-bind %s /bin/%s\n' "$(which "${f}")" "${f}"
+		done
+	)
 
 	# sys
 	--dev   /dev
@@ -39,8 +56,7 @@ GIT_IN=/home/fel/git
 	# default
 	--ro-bind ${DEFAULT_IN} ${DEFAULT_OUT}
 
-
-	# git stuff
+	# cgit stuff
 	--ro-bind ${GIT_IN}               /var/git
 	--ro-bind ${PWD}/etc/cgit/cgitrc  /etc/cgitrc
 	--ro-bind ${PWD}/etc/cgit/filter  /lib/cgit/filter
@@ -49,7 +65,7 @@ GIT_IN=/home/fel/git
 	# highlight
 	--ro-bind /etc/highlight          /etc/highlight
 	--ro-bind /usr/share/highlight    /usr/share/highlight
-
+	
 	# restrictions
 	--hostname RESTRICTED
 	--unshare-all
@@ -58,11 +74,11 @@ GIT_IN=/home/fel/git
 	--new-session
 
 	# run
-	althttpd 
-		-https 1   # use https
-		-jail 0    # disable builtin jail, we do our own
-		-root /www # set root to chroot www
-		-port 8002
+	thttpd
+		-D
+		-d ${DEFAULT_OUT}
+		-c /git
+		-p 8002
 EOF
 ))
 

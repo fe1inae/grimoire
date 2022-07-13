@@ -1,7 +1,8 @@
-# styling
+# info
 root-title=ulthar
 root-desc=fel's git repos
 
+# styling
 css=/css/felgit.css
 logo=/pic/fel_small.png
 
@@ -12,21 +13,23 @@ about-filter=/lib/cgit/filter/format.sh
 # readmes
 readme=:README
 readme=:README.md
+readme=:README.7
 
 # repo
-clone-url=git://ulthar.cat/$CGIT_REPO_URL
-snapshots=tar.gz zip
+clone-url=git://ulthar.cat/$CGIT_REPO_URL http://ulthar.cat/git/$CGIT_REPO_URL
+snapshots=tar.gz tar.lz zip
 
+branch-sort=age
 enable-blame=1
 enable-commit-graph=1
-enable-subject-links=1
 enable-follow-links=1
-enable-index-owner=0
 enable-http-clone=1
-repository-sort=age
-branch-sort=age
+enable-index-owner=0
+enable-subject-links=1
 remove-suffix=1
-enable-git-config=1
+repository-sort=age
+
+virtual-root=/git
 
 # repo discovery
 strict-export=git-daemon-export-ok
