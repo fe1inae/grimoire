@@ -1,5 +1,8 @@
 #!/bin/sh
 set -eu
+. bin/lib.sh
+
+task "MAKING GEMINI"
 
 # INIT VARS
 # =========
@@ -26,21 +29,19 @@ done
 FORCE="${OPT_FORCE}"
 VERBOSE="${OPT_VERBOSE}"
 
-# UTIL FUNCS
-# ==========
-
-. bin/lib.sh
-
 # FUNCTIONS
 # =========
 
 # generate a gmi page
 mkgmi() {
-	sed 's/\.ext/.gmi/g' "${f}" \
+	cat "${f}" \
+		| sed 's;\.ext;.gmi;g' \
+		| sed 's;protocol://;gemini://;g' \
 		| sh bin/gmni/pre.sh \
 		| mandoc \
 			-mdoc \
 			-Tutf8 \
+			-Ios="ulthar cat" \
 		| col -bx \
 		| sh bin/gmni/post.sh
 }

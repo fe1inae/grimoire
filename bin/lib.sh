@@ -19,6 +19,8 @@ log() {
 			> /dev/stderr
 	fi >&2
 }
+
+task() { C="\033[7;36m" P="TASK" log "${1}"; }
 notify() { C="\033[7;35m" P="NOTE" log "${1}"; }
 lmake() { C="\033[7;32m" P="MAKE" log "$(realpath "${1}")"; }
 lskip() {

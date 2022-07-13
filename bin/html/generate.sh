@@ -1,5 +1,8 @@
 #!/bin/sh
 set -eu
+. bin/lib.sh
+
+task "MAKING HTML"
 
 # INIT VARS
 # =========
@@ -26,11 +29,6 @@ done
 FORCE="${OPT_FORCE}"
 VERBOSE="${OPT_VERBOSE}"
 
-# UTIL FUNCS
-# ==========
-
-. bin/lib.sh
-
 # FUNCTIONS
 # =========
 
@@ -39,10 +37,13 @@ mkhtml() {
 	tr -d '\n' < etc/head.html
 	sh bin/html/sidebar.sh "${f}"
 	printf '<article>'
-	sed 's/\.ext/.html/g' "${f}" \
+	cat "${f}" \
+		| sed 's;\.ext;.html;g'  \
+		| sed 's;protocol://;https://;g' \
 		| mandoc \
 			-mdoc \
 			-Thtml \
+			-Ios="ulthar cat" \
 			-O fragment
 	printf '</article>'
 	tr -d '\n' < etc/foot.html

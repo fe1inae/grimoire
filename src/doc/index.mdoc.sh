@@ -4,17 +4,28 @@ cat <<'EOF'
 .Dd $Mdocdate$
 .Dt "documents and stuffs" 7
 .Os "ulthar cat"
-.Sh FILES
+.Sh posts
+.Pp
+blog/rants/etc. rampant incoherency, so be warned :P
+
 .Bd -unfilled -compact
 EOF
 for f in *; do
 	case "$f" in
 	*.mdoc)
-		printf '.Lk %s %s - %s\n' \
+		printf '%s %s %s\n' \
+			"$(sed -n 's/^.Dd \(.*\)/\1/ p' "$f")" \
 			"${f%.mdoc}.ext" \
-			"$(date -d @$(stat -c %Y "$f") +%Y%m%d)" \
-			"${f%.mdoc}"
+			"$(sed -n 's/^.Dt "\([^"]*\)".*/\1/ p' "$f")"
 		;;
 	esac
+done | sort -nr | while read -r line; do
+	set -- $line
+	time="$1"
+	url="$2"
+	shift; shift
+	desc="$@"
+	printf '.Lk protocol://ulthar.cat/doc/%s %s - %s\n' "$url" "$time" "$desc"
 done
+	
 printf '.Ed\n'
