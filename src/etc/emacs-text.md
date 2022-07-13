@@ -1,4 +1,3 @@
-2022-01-27 ~fel
 # emacs text interfaces
 
 (note: excluding exwm and weird emacs derivations that can do web stuff)

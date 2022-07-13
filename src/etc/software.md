@@ -32,8 +32,8 @@ firefox or degoogled chromium.
 
 linux, bsd, even macos id say. personal favorites are:
 
-=> https://www.alpinelinux.org/ alpine linux
-=> https://www.openbsd.org/ openbsd
+[alpine linux](https://www.alpinelinux.org/)  
+[openbsd](https://www.openbsd.org/)  
 
 unless you play a lot of modern games, especially ones with anticheat;
 then windows probably best bet.
@@ -53,7 +53,8 @@ it standardizes many protocols and makes writing a compositor much easier.
 i personally use river without a tiler, so always floating.
 it work, im not the happiest with it but its good enough.
 
-=> https://github.com/riverwm/river/
+<https://github.com/riverwm/river/>
+
 
 ## text editors
 
@@ -75,11 +76,11 @@ if it was more trimmed it would be near ideal for a visual editor probably.
 sam -d is my $EDITOR. more powerful than ed,
 and structural regex are comparable to kakoune in function.
 
-=> https://acme.cat-v.org/ acme
-=> https://github.com/martanne/vis vis
-=> https://github.com/mawww/kakoune/ kakoune
-=> https://orbitalquark.github.io/textadept/ textadept
-=> https://sam.cat-v.org/ sam 
+[acme](https://acme.cat-v.org/)  
+[vis](https://github.com/martanne/vis)  
+[kakoune](https://github.com/mawww/kakoune/)  
+[textadept](https://orbitalquark.github.io/textadept/)  
+[sam ](https://sam.cat-v.org/)  
 
 ## docs
 
@@ -88,13 +89,13 @@ id rather view html in w3m than that.
 preferably though, just write manpages.
 its not that hard despite its weird looking syntax.
 
-=> https://mandoc.bsd.lv/ mandoc
+[mandoc](https://mandoc.bsd.lv/)  
 
 ## rss readers
 
 just use rss, i dont even want to complain. just use it, please.
 
-=> https://codemadness.org/git/sfeed/log.html sfeed my beloved
+[sfeed my beloved](https://codemadness.org/git/sfeed/log.html)  
 
 ## music
 
@@ -104,9 +105,9 @@ just not spotify please.
 
 i personally like cmus, but theres quite a lot of open source audio players.
 
-=> https://github.com/cmus/cmus cmus my beloved
-=> https://github.com/quodlibet/quodlibet quod libet
-=> https://wiki.gnome.org/Apps/Rhythmbox rhythombox
+[cmus my beloved](https://github.com/cmus/cmus)  
+[quod libet](https://github.com/quodlibet/quodlibet)  
+[rhythombox](https://wiki.gnome.org/Apps/Rhythmbox)  
 
 ## computers
 

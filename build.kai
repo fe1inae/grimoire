@@ -15,8 +15,18 @@ rule gemfmt: awk -f bin/unwrap.awk $in > $out
 rule copy: cp -f $in $out
 rule run: sh $in > $out
 
-rule gmi2gmi: sed -f bin/gemini/replace.sed $in > $out
-rule gmi2html
+rule md2gmi: 
+	command = [[
+		sed -f bin/gemini/replace.sed $in
+		| lowdown 
+			-T gemini
+			-M protocol:gemini
+			-M extension:gmi
+			--gemini-metadata
+		> $out
+	]]
+
+rule md2html
 	description = convert $in > $out
 	command = [[
 		:> $out;
@@ -27,7 +37,11 @@ rule gmi2html
 
 		printf '<article>' >> $out;
 		sed -f bin/html/replace.sed $in
-		| awk -f bin/html/gmi2html.awk
+		| lowdown 
+			-T html
+			-M protocol:https
+			-M extension:html
+			--parse-math
 		>> $out;
 		printf '</article>' >> $out;
 

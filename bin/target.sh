@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-find  src -type f | {
+find src -type f | {
 	static=""
 	while read -r fin; do
 
@@ -16,9 +16,6 @@ find  src -type f | {
 			fcache="${fcache%.sh}"
 			printf 'build %s: run %s\n' "${fcache}" "${fin}"
 			;;
-		*.gmi)
-			printf 'build %s: gemfmt %s\n' "${fcache}" "${fin}"
-			;;
 		*)
 			printf 'build %s: copy %s\n'   "${fcache}" "${fin}"
 			;;
@@ -31,9 +28,9 @@ find  src -type f | {
 			fout="out/${i}/${fcache#tmp/}"
 
 			case "${fcache}" in
-			*.gmi) 
-				fout="${fout%.gmi}.${i}"
-				printf 'build %s: gmi2%s %s\n' \
+			*.md) 
+				fout="${fout%.md}.${i}"
+				printf 'build %s: md2%s %s\n' \
 					"${fout}" "${i}" "${fcache}"
 				;;
 			*) 

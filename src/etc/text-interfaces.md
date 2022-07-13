@@ -1,4 +1,3 @@
-2022-01-27 ~fel
 # text interfaces
 
 note: this is a current interest and contents will be updated/subject to
@@ -13,18 +12,22 @@ vt100 sequences, or adds significant new possibilities.
 
 ## sub pages
 
-=> plan9-text.{{ext}}
-=> emacs-text.{{ext}}
+<plan9-text.[%extension]>
+
+<emacs-text.[%extension]>
+
 
 ## terminal-esque
 
-=> https://github.com/withoutboats/notty
+<https://github.com/withoutboats/notty>
+
 
 sadly a dead project (last commit may 2017), it had lofty goals of
 implementing basic vt100 sequences in addition to inline media, dropdown
 menus, and the ability to subdivide the character screen.
 
-=> https://github.com/kovidgoyal/kitty
+<https://github.com/kovidgoyal/kitty>
+
 
 one of the most popular terminals emulators, includes a custom terminal
 graphics implementation, modern keyboard capabilities, and a variety of

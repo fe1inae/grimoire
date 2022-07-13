@@ -1,4 +1,3 @@
-2022-01-27 ~fel
 # plan9 text interface
 
 the entire plan9 system centers around text manipulation, though the most

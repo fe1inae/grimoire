@@ -1,4 +1,3 @@
-2022-01-24 ~fel
 # my network layout
 
 my layout and structure of my various devices is probably a bit abnormal,

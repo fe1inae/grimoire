@@ -1,2 +1,2 @@
-s/{{protocol}}/https/g
-s/{{ext}}/html/g
+s/\[%protocol\]/https/g
+s/\[%extension\]/html/g

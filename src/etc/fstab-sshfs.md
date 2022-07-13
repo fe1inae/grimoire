@@ -1,4 +1,3 @@
-2022-01-23 ~fel
 # sshfs in fstab
 
 it is possible to mount sshfs from fstab, so it will automatically mount

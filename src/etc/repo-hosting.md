@@ -1,4 +1,3 @@
-2022-01-26 ~fel
 # repository guidelines
 
 its a bit of a tangle to juggle between different git hosting services,

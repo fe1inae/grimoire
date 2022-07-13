@@ -1,7 +1,13 @@
-2022-01-28 ~fel
-# personal worlds
+title:   personal worlds
+summary: thoughts on the "world" each individual creates
+author:  fel
+date:    2022-01-28
 
-## technology
+[%title]
+========
+
+technology
+----------
 
 i feel like i just want things to be mine. its hard to be comfortable in
 a space where you do not know what is going on, or how things work. and
@@ -19,7 +25,8 @@ no shortcuts taken, then it wouldnt have much of a use anyways. so thus,
 the goal is to build tooling and worlds for yourself where the shortcuts
 are always, exactly (or at least within certain bounds), what you expect.
 
-## elsewhere
+elsewhere
+---------
 
 i think most of my life is trying to reach that point, of just total
 comfort and security, understanding myself and others around me. first
@@ -37,7 +44,8 @@ quite convenently.  of course i couldnt say whether it was fortune or if
 they shaped what i wanted, but the end result is the same so i dont
 really mind.
 
-## consumption
+consumption
+-----------
 
 i dont get how people can just.. be fine consuming. even when i read
 books, which is about as pure of consumption i do, i use it to live in
@@ -48,7 +56,8 @@ digestion, not just endless nom nom nom.  well this will turn into
 general anti-social media rant if this continues.  just like, appreciate
 the art you consume. that entails curating it also, giving it respect.
 
-## self expression
+self expression
+---------------
 
 of course an undeniable part is the feeling of projecting your inner self
 onto your creations being just plainly fantastic. i dont really think
@@ -64,7 +73,8 @@ in live, how to live a sustainable life without compromising to what i
 firmly do not believe in.  this is certainly a common issue in the modern
 software world, so no point elaborating :p
 
-## bweh
+bweh
+----
 
 i write much rant, i tire. thinking hard i am no philosopher. just random
 spewing thoughts that seem right in the now, and probably not in the

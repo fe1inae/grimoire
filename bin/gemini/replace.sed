@@ -1,2 +1,2 @@
-s/{{protocol}}/gemini/g
-s/{{ext}}/gmi/g
+s/\[%protocol\]/gemini/g
+s/\[%extension\]/gmi/g

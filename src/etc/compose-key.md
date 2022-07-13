@@ -1,4 +1,3 @@
-2022-01-26 ~fel
 # using the compose key
 
 decided to setup a compose key for myself, not because i need to type
@@ -61,5 +60,5 @@ v /  √  square root
 = _  ≡  indentical
 ```
 
-full (default) list for xorg is at
-=> https://cgit.freedesktop.org/xorg/lib/libX11/plain/nls/en_US.UTF-8/Compose.pre
+full (default) list for xorg is at https://cgit.freedesktop.org/xorg/lib/libX11/plain/nls/en_US.UTF-8/Compose.pre
+

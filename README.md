@@ -3,19 +3,21 @@ grimoire
 
 personal site and glue for various things
 
-requires
+depends on
+----------
+
+- bubblewrap
 - busybox httpd
-- bubblewrap 
 - cgit
 - chafa
 - didder
 - highlight
-- imagemagick
 - kai
 - lowdown
-- ninja 
+- ninja/samu
 - posix utils
 
+```
 (\
  \`\
   \'\     __________
@@ -24,3 +26,4 @@ requires
    \`,     \ ~~~~~~   \
     ==).    \__________\
    (__)     ()__________)
+```
