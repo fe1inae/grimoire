@@ -1,5 +1,5 @@
 title: warframe builds
-css:   ../../../css/style.css
+css:   ../../../../css/style.css
 
 [%title]
 ========

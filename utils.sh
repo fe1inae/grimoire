@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # UTILITIES
 # =========
 
@@ -47,13 +49,47 @@ isolder()
 	} 2>/dev/null
 }
 
+# preprocessing
+pre()
+{
+	awk '
+		BEGIN {
+			class["@"] = "external"
+			class[":"] = "internal"
+		}
+		
+		{
+			while (match($0, /[:@]\[[^]]*\]\([^)]*\)/)) {
+				# get elements
+				type = substr($0, RSTART, 1)
+				link = substr($0, RSTART+1, RLENGTH-1)
+				full = type link
+				
+				# escape each character
+				ere =  ""
+				for (i = 1; i <= length(full); i++) {
+					c = substr(full, i, 1)
+					if (c ~ /[[:alpha:]]/)
+						ere = ere substr(full, i, 1)
+					else
+						ere = ere "\\" substr(full, i, 1)
+				}
+				
+				gsub(ere, link "{ ." class[type] " }")
+				
+			}
+			print
+		}
+	' /dev/stdin
+}
+
 # CONVERSION
 # ==========
 
 md2html()
 {
 	sed -e 's/\.md)/.html)/g' \
-		| lowdown -s -T html \
+		| lowdown -s -T html --parse-math \
 		| awk '
 			/^<link rel="stylesheet/ {
 				print

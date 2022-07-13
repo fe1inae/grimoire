@@ -13,9 +13,8 @@ known like
 
 - [awk](./awk.md) for its text processing focus
 - [c](./c.md) for its universality and control
-- [fennel](./fennel.md) for making lua enjoyable
 - [forth](./forth.md) for its representation of the computer
-- [janet](./janet.md) for being small yet featureful and extensible
+- [lisp](./lisp.md) for its representation of data
 - [shell](./sh.md) for its stupid yet versatile hackiness
 
 should try
@@ -25,6 +24,8 @@ should try
 - erlang for its actor model of concurrency
 - [uxn](https://wiki.xxiivv.com/site/uxntal.html)
   for its simplicity in making small gui applications
+- zig for consolidated systems which make working cross platform easier
+- nim for the hilarious macro abuse in a compiled language
 
 eye on
 ------
@@ -32,3 +33,4 @@ eye on
 - (drews language, which is not ~~easily found~~ public :p)
   for its at least attempt at modernizing c while keeping it minimal and
   lightweight
+- odin for its hefty but not out of scope stdlib.

@@ -13,14 +13,16 @@ body {
 ::marker { content: "• "; }
 ::selection { background-color: #fdf; color: #000; }
 
-/* header alignment */
-.header { width: 100%; }
-.header > tr { text-align: left; }
-.header > tbody > tr > th:nth-child(1) { text-align: left; }
-.header > tbody > tr > th:nth-child(2) { text-align: right; }
-
 /* links */
-a         { color: #fff; text-decoration: none; }
-a:hover   { background-color: #ddf; color: #000; }
-a::before { content: "{"; }
-a::after  { content: "}"; }
+a         { background-color: #000; color: #fff; text-decoration: none; }
+a:hover   { background-color: #fdf; color: #000; }
+
+a::before, a.internal::before { content: "{"; }
+a::after,  a.internal::after  { content: "}"; }
+
+a.external::before { content: "<"; }
+a.external::after  { content: ">"; }
+
+/* inputs (rare) */
+input[type=checkbox] { pointer-events: none; } /* TODO: figure out how to style */
+

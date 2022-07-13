@@ -4,12 +4,15 @@ css:   ../../../css/style.css
 [%title]
 ========
 
-fun game. lots of stuff to do and grind for. enjoy its optimization.
+i am currently still noob. no point making real "builds" when i am going to 
+get a new mod the next day. any information is likely to be transcribed from
+the @[wiki](https://warframe.fandom.com/wiki/WARFRAME_Wiki) or the ingame
+@[codex](https://warframe.fandom.com/wiki/Codex).
 
-[syndicates](./syndicates.md)  
-[weapons](./weapons.md)  
+[builds](./builds/index.md)  
+[frames](./frames/index.md)  
+[weapons](./weapons/index.md)  
+
+[misc](./misc.md)  
 [mods](./mods.md)  
-[frames](./frames.md)  
-[misc](./misc.md)
-
-[builds](./builds.md)  
+[syndicates](./syndicates.md)  

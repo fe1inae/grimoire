@@ -59,7 +59,7 @@ information arguably the most vital element in surviving, at bare minimum
 psychologically. computers can streamline this process, given a medium.
 
 there are numerous protocols for low tech communication between computers,
-perhaps most humorously [RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549),
+perhaps most humorously @[RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549),
 which describes a network protocol purely using carrier pidgens. a more
 reasonable proposal consists of a mesh of HAM or similar radios, which already
 overlaps relatively largely with those preparing for collapse.
@@ -76,8 +76,8 @@ XXX (i got bored, more schizorants to come)
 see also
 --------
 
-- http://bootstrappable.org/
-- http://collapseos.org/
-- https://bootstrapping.miraheze.org/wiki/Main_Page
-- https://wiki.xxiivv.com/site/collapse_computing.html
+- @[bootstrappable.org](http://bootstrappable.org/)
+- @[collapseos.org](http://collapseos.org/)
+- @[bootstrapping.miraheze.org/wiki/Main_Page](https://bootstrapping.miraheze.org/wiki/Main_Page)
+- @[wiki.xxiivv.com/site/collapse_computing.html](https://wiki.xxiivv.com/site/collapse_computing.html)
 

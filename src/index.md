@@ -16,6 +16,6 @@ fan of movement shooters, personal(ized) computing, emergent behavior, and cats
 
 [git repos](./cgi-bin/cgit)
 
-[personal wiki](./wiki/index.md)  
 [blog and/or rants](./blog/index.md)  
 [miscellaneous posts](./misc/index.md)  
+[personal wiki/notes tree](./wiki/index.md)  

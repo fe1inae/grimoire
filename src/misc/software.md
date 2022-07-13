@@ -36,8 +36,8 @@ firefox or degoogled chromium.
 
 linux, bsd, even macos id say. personal favorites are:
 
-[alpine linux](https://www.alpinelinux.org/)  
-[openbsd](https://www.openbsd.org/)  
+@[alpine linux](https://www.alpinelinux.org/)  
+@[openbsd](https://www.openbsd.org/)  
 
 unless you play a lot of modern games, especially ones with anticheat;
 then windows probably best bet.
@@ -80,11 +80,11 @@ if it was more trimmed it would be near ideal for a visual editor probably.
 sam -d is my $EDITOR. more powerful than ed,
 and structural regex are comparable to kakoune in function.
 
-[acme](https://acme.cat-v.org/)  
-[vis](https://github.com/martanne/vis)  
-[kakoune](https://github.com/mawww/kakoune/)  
-[textadept](https://orbitalquark.github.io/textadept/)  
-[sam ](https://sam.cat-v.org/)  
+@[acme](https://acme.cat-v.org/)  
+@[vis](https://github.com/martanne/vis)  
+@[kakoune](https://github.com/mawww/kakoune/)  
+@[textadept](https://orbitalquark.github.io/textadept/)  
+@[sam ](https://sam.cat-v.org/)  
 
 ## docs
 
@@ -93,13 +93,13 @@ id rather view html in w3m than that.
 preferably though, just write manpages.
 its not that hard despite its weird looking syntax.
 
-[mandoc](https://mandoc.bsd.lv/)  
+@[mandoc](https://mandoc.bsd.lv/)  
 
 ## rss readers
 
 just use rss, i dont even want to complain. just use it, please.
 
-[sfeed my beloved](https://codemadness.org/git/sfeed/log.html)  
+@[sfeed my beloved](https://codemadness.org/git/sfeed/log.html)  
 
 ## music
 
@@ -109,9 +109,9 @@ just not spotify please.
 
 i personally like cmus, but theres quite a lot of open source audio players.
 
-[cmus my beloved](https://github.com/cmus/cmus)  
-[quod libet](https://github.com/quodlibet/quodlibet)  
-[rhythombox](https://wiki.gnome.org/Apps/Rhythmbox)  
+@[cmus my beloved](https://github.com/cmus/cmus)  
+@[quod libet](https://github.com/quodlibet/quodlibet)  
+@[rhythombox](https://wiki.gnome.org/Apps/Rhythmbox)  
 
 ## computers
 
