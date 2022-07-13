@@ -10,14 +10,14 @@ slowly cultivating an ecosystem of my preferences
 ## contact
 
 => mailto:felinae@ulthar.cat
-=> https://nixnet.social/fel
 
 ## pages
 
 => git/ git
+=> wiki/ wiki
 
-=> now/ status
 => log/ journal
+=> now/ status
 
-=> etc/ random
 => txt/ pastebin
+=> etc/ random
