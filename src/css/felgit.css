@@ -7,7 +7,7 @@
 div#cgit {
 	max-width: 120ch;
 	margin: auto;
-	font-family: monospace;
+	font-family: phantasm, unscii, unifont, consolas, monospace;
 	tab-size: 8;
 }
 
