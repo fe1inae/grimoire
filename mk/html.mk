@@ -1,9 +1,8 @@
-# XXX: sidebar
 build/html/%.html: tmp/%.gmi
 	@mkdir -p "$(@D)"
 	@:> "${@}"
 	@tr -d '\n\t' < etc/head.html >> "${@}"
-	@sh bin/htmlsidebar.sh "${*}.html" >> "${@}"
+	@sh bin/htmlheader.sh "${*}.html" >> "${@}"
 	@printf '<article>' >> "${@}"
 	@awk -f bin/unwrap.awk "${<}"          \
 		| sed '                            \

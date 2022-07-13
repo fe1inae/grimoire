@@ -1,13 +1,13 @@
 # NOTICE
 
-I am lurker, it is in my nature.  I don't participate in much socially
-but I am there.  Feel free to contact me regardless, if you want to for
-some reason.
+i am lurker, it is in my nature.
+i don't participate in much socially, but i am there.
+feel free to contact me regardless, if you want to for some reason.
+rot13 cause bots are annoying.
 
 # LINKS
 
-=> mailto:felinae@ulthar.cat mail
-=> https://nixnet.social/fel fedi
-=> irc://irc.oftc.net fel @ oftc
-=> irc://irc.tilde.chat fel @ tilde
-=> irc://irc.libera.chat fel @ libera
+* mail znvygb:sryvanr@hygune.png
+* fedi uggcf://avkarg.fbpvny/sry
+* ircs sry,sryvanr,sr1vanr
+

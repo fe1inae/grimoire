@@ -49,7 +49,7 @@ didder                                          \
 	-p "$COLORS"                                \
 	$DOPTS                                      \
 	-out -                                      \
-	-in "etc/fel.png"                           \
+	-in "src/ass/fel.png"                       \
 	bayer 256 256                               \
 	| chafa                                     \
 		-s "${W}x${H}"                          \

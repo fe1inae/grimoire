@@ -10,7 +10,6 @@ build: ${SRC}
 push: all
 	rm -rf ${WWW}/*
 	cp -rf build/* ${WWW}
-	
 
 include mk/default.mk
 include mk/gemini.mk

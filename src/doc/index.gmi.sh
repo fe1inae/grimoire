@@ -2,7 +2,7 @@ cd "${0%/*}" || true
 
 cat <<'EOF'
 # posts
-blog/rants/etc. rampant incoherency, so be warned :P
+gemlog. expect rampant incoherency, so be warned :P
 
 EOF
 
