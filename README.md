@@ -12,14 +12,18 @@ grimoire
    (__)     ()__________)
 ```
 
-depends on
-----------
+build dependencies
+------------------
+
+- lowdown
+- posix utils
+
+webserver dependencies
+----------------------
 
 - bubblewrap
 - busybox httpd
 - cgit
-- chafa
-- didder
 - highlight
 - lowdown
 - posix utils

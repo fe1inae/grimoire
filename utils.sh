@@ -52,27 +52,23 @@ isolder()
 
 md2html()
 {
-#	printf '<!DOCTYPE html>'
-#	printf '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">'
-#	printf '<head><meta charset="utf-8"/>'
-#	printf '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>'
-#	printf '<link rel="stylesheet" type="text/css" href="/css/style.css">'
-#	printf '<title>ulthar cat</title></head><body>'
-	sed                                \
-		-e 's/\[%protocol\]/https/g'   \
-		-e 's/\[%extension\]/html/g'   \
-		| lowdown -s                   \
-			-T html                    \
-			--parse-math               \
-			-M "css:/css/style.css" 
-#	printf '</body></html>'
+	sed -e 's/\.md)/.html)/g' \
+		| lowdown -s -T html \
+		| awk '
+			/^<link rel="stylesheet/ {
+				print
+				sub(/.*href="/, "")
+				sub(/".*/, "")
+				sub(/css\/style.css/, "pic/favicon.ico")
+				$0 = "<link rel=\"icon\" type=\"image/x-icon\" href=\"" $0 "\">"
+			}
+			
+			{ print }
+		'
 }
 
 md2gmi()
 {
-	sed                                \
-		-e 's/\[%protocol\]/gemini/g'  \
-		-e 's/\[%extension\]/gmi/g'    \
-		| lowdown -s                   \
-			-T gemini
+	sed -e 's/\.md)/.gmi)/g' \
+		| lowdown -s -T gemini
 }

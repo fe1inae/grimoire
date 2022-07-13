@@ -1,4 +1,8 @@
-# emacs text interfaces
+title: emacs text interfaces
+css:   ../css/style.css
+
+[%title]
+=======
 
 (note: excluding exwm and weird emacs derivations that can do web stuff)
 

@@ -1,4 +1,8 @@
-# software
+title: software
+css:   ../css/style.css
+
+[%title]
+========
 
 my personal "stuff that rocks/sucks" list, continually changing.
 formatted as "instead of xx" or "for xx use case"

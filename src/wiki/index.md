@@ -1,5 +1,9 @@
 title: fels wiki
+css:   ../css/style.css
 
+categories
+==========
 
-todo :p
-=======
+[virtual machines](./vms/index.md)  
+[programming languages](./langs/index.md)  
+

@@ -2,6 +2,7 @@ title:   personal worlds
 summary: thoughts on the "world" each individual creates
 author:  fel
 date:    2022-01-28
+css:     ../css/style.css
 
 [%title]
 ========

@@ -1,4 +1,8 @@
-# using the compose key
+title: using the compose key
+css:   ../css/style.css
+
+[%title]
+========
 
 decided to setup a compose key for myself, not because i need to type
 other languages, but just because i like being able to type unicode

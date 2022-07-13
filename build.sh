@@ -45,10 +45,10 @@ main()
 		
 		# build depending on input type
 		case "${fin}" in
-		*.md.sh) sh "${fin}" | md2html   > "${fout}" ;;
-		*.md)    md2html     < "${fin}"  > "${fout}" ;;
-		*.sh)    sh "${fin}"             > "${fout}" ;;
-		*)       cp -f "${fin}"            "${fout}" ;;
+		*.md.sh) sh "${fin}" | md2html > "${fout}" ;;
+		*.md)    md2html < "${fin}"    > "${fout}" ;;
+		*.sh)    sh "${fin}"           > "${fout}" ;;
+		*)       cp -f "${fin}"          "${fout}" ;;
 		esac
 	done
 }

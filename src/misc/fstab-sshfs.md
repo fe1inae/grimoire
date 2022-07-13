@@ -1,4 +1,8 @@
-# sshfs in fstab
+title: sshfs in fstab
+css:   ../css/style.css
+
+[%title]
+========
 
 it is possible to mount sshfs from fstab, so it will automatically mount
 on boot. this is quite useful obviously, and i personally use it to mount

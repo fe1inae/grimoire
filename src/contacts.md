@@ -1,4 +1,5 @@
 title: contacts
+css:   css/style.css
 
 notice
 ======

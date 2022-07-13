@@ -1,4 +1,8 @@
-# text interfaces
+title: text interfaces
+css:   ../css/style.css
+
+[%title]
+========
 
 note: this is a current interest and contents will be updated/subject to
 change
@@ -12,9 +16,9 @@ vt100 sequences, or adds significant new possibilities.
 
 ## sub pages
 
-<plan9-text.[%extension]>
+<plan9-text.md>
 
-<emacs-text.[%extension]>
+<emacs-text.md>
 
 
 ## terminal-esque

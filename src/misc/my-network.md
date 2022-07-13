@@ -1,4 +1,8 @@
-# my network layout
+title: my network layout
+css:   ../css/style.css
+
+[%title]
+========
 
 my layout and structure of my various devices is probably a bit abnormal,
 but i really enjoy how they work together. it wouldnt scale well at all

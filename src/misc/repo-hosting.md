@@ -1,4 +1,8 @@
-# repository guidelines
+title: repository guidelines
+css:   ../css/style.css
+
+[%title]
+========
 
 its a bit of a tangle to juggle between different git hosting services,
 so im going to lay out some very not strict rules for myself.

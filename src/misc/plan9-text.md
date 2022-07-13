@@ -1,4 +1,8 @@
-# plan9 text interface
+title: plan9 text interface
+css:   ../css/style.css
+
+[%title]
+========
 
 the entire plan9 system centers around text manipulation, though the most
 notable is certainly acme. it is a mouse driven interface focused on

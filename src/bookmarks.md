@@ -1,3 +1,6 @@
+title: bookmarks
+css:   css/style.css
+
 gemini
 ======
 
