@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-DEFAULT_IN=/home/fel/grm/out/html
+DEFAULT_IN=${PWD}/out/html
 DEFAULT_OUT=/www/default.website
 
 GIT_IN=/home/fel/git
