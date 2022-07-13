@@ -1,8 +1,6 @@
-title = "collapse computing"
-
 document {
-	h1 {title},
-	
+	title "collapse computing",
+
 	p {
 		"shits probably gonna fail at some point, the world seems to balance on a ",
 		"slack rope that resonates and shakes more and more each year.",

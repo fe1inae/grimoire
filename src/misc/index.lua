@@ -1,8 +1,6 @@
-title = "misc documents"
-
 document {
-	h1 {title},
-	
+	title "misc documents",
+
 	p "random documents and stuff, of varying quality",
 }
 

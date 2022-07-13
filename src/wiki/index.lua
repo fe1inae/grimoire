@@ -1,8 +1,6 @@
-title = "fels wiki"
-
 document {
-	h1 {title},
-	
+	title "fels wiki",
+
 	h2 "disclaimer",
 
 	p {

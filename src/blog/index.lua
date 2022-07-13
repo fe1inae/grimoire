@@ -1,7 +1,5 @@
-title = "posts"
-
 document {
-	h1 {title},
+	title "posts",
 	
 	describe {
 		{

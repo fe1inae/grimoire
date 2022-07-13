@@ -1,6 +1,4 @@
-title = "error 404"
-
 document {
-	h1 "error",
+	title "this is a test",
 	embed("/pic/404.png", "the text 404 with an mspaint cat"),
 }

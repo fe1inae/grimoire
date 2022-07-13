@@ -1,7 +1,7 @@
-title = "contact me"
-
 document {
-	h1 "notice",
+	title "contact me",
+
+	h2 "notice",
 
 	p {
 		"i am lurker, it is in my nature.",
@@ -9,11 +9,10 @@ document {
 		"feel free to contact me regardless, if you want to for some reason.",
 	},
 
-	h1 "links",
+	h2 "links",
 	
 	tree {
 		"irc: fel,felinae,fe1inae",
-		"discord: felinae#7963",
 		"email (rot13): sryvanr@hygune.png",
 	},
 	

@@ -7,7 +7,7 @@ document {
 	
 	p {
 		"a pargarph and inline link, say to",
-		url("https://google.com", "google"),
+		ref("https://google.com", "google"),
 	},
 	
 	tree {
@@ -20,6 +20,20 @@ document {
 				"this is another.",
 			},
 		},
+	},
+	
+	list {
+		"this is one thing",
+		"this is another",
+		{
+			"this is a subtree",
+			"AAAAAAA",
+			{
+				"this is another.",
+			},
+			"aa",
+		},
+		"lol",
 	},
 	
 	table "lol",

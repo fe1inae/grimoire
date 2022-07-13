@@ -2,7 +2,7 @@
 set -eu
 cd "$(dirname "$(realpath "$0")")"
 
-DEFAULT_IN=${PWD}/www
+DEFAULT_IN=${PWD}/out/html
 DEFAULT_OUT=/www
 
 GIT_IN="${GIT_PATH:-"$HOME/git"}"
@@ -30,6 +30,10 @@ for f in $DYNAMIC; do
 		exit 1
 	fi
 done
+
+# copy cgit
+mkdir -p ${DEFAULT_IN}/cgi-bin
+cp -f /usr/share/webapps/cgit/cgit ${DEFAULT_IN}/cgi-bin/cgit
 
 # launch bwrap
 (exec env -i bwrap $(awk '{ sub(/#.*$/, ""); printf("%s ", $0) }' <<-EOF
@@ -65,7 +69,6 @@ done
 	--ro-bind ${GIT_IN}               /var/git
 	--ro-bind ${PWD}/etc/cgit/cgitrc  /etc/cgitrc
 	--ro-bind ${PWD}/etc/cgit/filter  /lib/cgit/filter
-	--ro-bind /usr/share/webapps/cgit /bin/cgit
 	--dir /cache/cgit
 
 	# highlight

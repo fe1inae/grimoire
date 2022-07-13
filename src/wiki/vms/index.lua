@@ -1,7 +1,5 @@
-title = "alternative computing environments"
-
 document {
-	h1 {title},
+	title "alternative computing environments",
 	
 	p {
 		"computers are kinda bad.",

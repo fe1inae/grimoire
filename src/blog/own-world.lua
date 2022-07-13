@@ -1,7 +1,6 @@
-title = "personal worlds"
-
 document {
-	h1 {title},
+	title "personal worlds",
+
 
 	h2 {"technology"},
 

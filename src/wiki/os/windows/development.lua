@@ -1,7 +1,5 @@
-title = "development on windows"
-
 document {
-	h1 {title},
+	title "development on windows",
 
 	p "programs and general setup that i use for development on windows",
 

@@ -3,42 +3,50 @@
 
 local lfs  = require("lfs")
 
--- UTILITIES
--- =========
-
-local html = require("lib/html")
-
--- VARIABLES
--- =========
-
-local INPUT  = "src"
-local OUTPUT = "www"
-
 -- RECURSE
 -- =======
 
-function build(path, d)
-	if not d then d = 1 end
-	lfs.mkdir(path:gsub("^" .. INPUT, OUTPUT))
-	for file in lfs.dir(path)
+function build(in_dir, out_dir, tl, path, depth)
+
+	-- set defaults for init
+	if not path  then path  = in_dir end
+	if not depth then depth = 1      end
+	
+	-- make current path dir
+	local tmp = "."
+	for p in path:gsub("^" .. in_dir, out_dir):gmatch("[^/\\]+")
 	do
+		tmp = tmp .. "/" .. p
+		lfs.mkdir(tmp)
+	end
+	
+	-- loop over files in path
+	for file in assert(lfs.dir(path))
+	do
+		-- ignore "virtual?" files
 		if file ~= "." and file ~= ".."
 		then
-			local f = path .. "/" .. file
-			local o = f:gsub("^" .. INPUT, OUTPUT)
+			-- merge paths
+			local f = path .. "/" .. file 
 			
+			-- transform to output directory
+			local o = f:gsub("^" .. in_dir, out_dir)
+		
+			-- check if file is a directory
 			if assert(lfs.attributes(f)).mode == "directory"
 			then
-				build(f, d + 1)
+				-- recurse if so
+				build(in_dir, out_dir, tl, f, depth + 1)
 			else
 				-- convert or copy
 				if f:match("%.lua$")
 				then
-					html.convert(f, o, d)
+					-- convert in current func table
+					tl.convert(f, o, depth)
 				else
 					-- raw copy
-					local ohandle = assert(io.open(o, "w"))
-					local fhandle = assert(io.open(f, "r"))
+					local fhandle = assert(io.open(f, "rb"))
+					local ohandle = assert(io.open(o, "wb"))
 					ohandle:write(fhandle:read("*a"))
 					ohandle:close()
 					fhandle:close()
@@ -48,4 +56,8 @@ function build(path, d)
 	end
 end
 
-build(INPUT)
+-- CALL
+-- ====
+
+local html = require("lib/html")
+build("src", "out/html", html)

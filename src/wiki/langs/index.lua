@@ -1,8 +1,6 @@
-title = "favorite programming languages"
-
 document {
-	h1 {title},
-	
+	title "favorite programming languages",
+
 	p {
 		"theres a lot of languages, i tend to like small ones that each fit into a niche.",
 		"both in terms of purpose driven design, and overarching paradigms.",

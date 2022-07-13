@@ -1,7 +1,5 @@
-title = "operating systems"
-
 document {
-	h1 {title},
+	title "operating systems",
 	
 	url("./windows/index.html", "windows"),
 }

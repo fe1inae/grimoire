@@ -1,7 +1,7 @@
-title = "ulthar cat"
-
 document {
-	h1 "about",
+	title "ulthar cat",
+
+	h2 "about",
 	
 	p "felinae she/her",
 	
@@ -15,7 +15,7 @@ document {
 	
 	tree { url("./contacts.html", "contacts") },
 	
-	h1 "pages",
+	h2 "pages",
 	
 	tree {
 		url("/cgi-bin/cgit", "git repos"),

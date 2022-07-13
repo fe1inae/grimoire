@@ -1,7 +1,5 @@
-title = "windows languages"
-
 document {
-	h1 {title},
+	title "windows languages",
 	
 	p {
 		"cross platform languages are hard. and i am lazy. this is list of tolerable",
