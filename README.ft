@@ -1,0 +1,24 @@
+ulthar.cat - personal site root
+.H1
+
+bin
+ `--scripts
+etc
+ `--assets
+src
+ `--documents
+sub
+ `--subprojects
+tmp
+ `--test dir
+ 
+(\
+\'\
+ \'\     __________
+ / '|   ()_________)
+ \ '/    \ ~~~~~~~~ \
+  \`,     \ ~~~~~~   \
+   ==).    \__________\
+  (__)     ()__________)
+
+.NF
