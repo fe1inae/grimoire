@@ -17,20 +17,17 @@ GIT_IN=/home/fel/git
 	--ro-bind /usr/lib/libstdc++.so.6  /usr/lib/libstdc++.so.6
 
 	# minimum utils
-	--ro-bind /bin/awk     /bin/awk
-	--ro-bind /bin/sed     /bin/sed
-	--ro-bind /bin/sh      /bin/sh 
-	--ro-bind /bin/tar     /bin/tar
-	--ro-bind /usr/bin/tr  /bin/tr
+	--ro-bind $(which awk)  /bin/awk
+	--ro-bind $(which sed)  /bin/sed
+	--ro-bind $(which sh)   /bin/sh 
+	--ro-bind $(which tar)  /bin/tar
+	--ro-bind $(which tr)   /bin/tr
 
 	# bin
-	--ro-bind /usr/bin/althttpd  /bin/althttpd
-	--ro-bind /usr/bin/lowdown   /bin/lowdown
-	--ro-bind /usr/bin/highlight /bin/highlight
-	--ro-bind /usr/bin/mandoc    /bin/mandoc
-
-	# XXX removeme
-	--ro-bind /etc/passwd /etc/passwd
+	--ro-bind $(which althttpd)  /bin/althttpd
+	--ro-bind $(which lowdown)   /bin/lowdown
+	--ro-bind $(which highlight) /bin/highlight
+	--ro-bind $(which mandoc)    /bin/mandoc
 
 	# sys
 	--dev   /dev
