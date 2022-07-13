@@ -3,39 +3,13 @@ grimoire
 
 personal site and glue for various things
 
-tracked
--------
-
-build.sh - generates ninja build file and runs
-bin      - scripts to generate outputs
-etc      - build time assets
-src      - source for main site
-
-untracked
----------
-
-ext      - random, various programs dump into
-out/gmi  - minorly tweaked gemini output
-out/html - formatted and stylized html
-tmp      - temp cache directory for stage 1
-
-features
-========
-
-- an inlet folder to copy files to
-- scripts to convert gemtext to various format
-
-todo
-====
-
-- find something better than gemtext
-	- roff?
-- specifically i want
-	- tables
-	- maths (work-around-able, images etc)
-
-art
-===
+requires
+- althttpd
+- bubblewrap 
+- cgit
+- kai
+- ninja 
+- posix utils
 
 (\
  \`\

@@ -1,0 +1,53 @@
+# DEFAULTS
+# ========
+
+default static
+
+# VARIABLES
+# =========
+
+PUBLIC = /home/fel/var/public
+
+# RULES
+# =====
+
+rule gemfmt: awk -f bin/unwrap.awk $in > $out
+rule copy: cp -f $in $out
+rule run: sh $in > $out
+
+rule gmi2gmi: sed -f bin/gemini/replace.sed $in > $out
+rule gmi2html
+	description = convert $in > $out
+	command = [[
+		:> $out;
+
+		tr -d '\n\t' < etc/html/head.html >> $out;
+		
+		sh bin/html/header.sh $in >> $out;
+
+		printf '<article>' >> $out;
+		sed -f bin/html/replace.sed $in
+		| awk -f bin/html/gmi2html.awk
+		>> $out;
+		printf '</article>' >> $out;
+
+		tr -d '\n\t' < etc/html/foot.html >> $out;
+	]]
+
+# VIRTUAL
+# =======
+
+rule push: rsync -rv --delete out/* $PUBLIC/www
+build push: push
+
+rule serve: sh bin/serve.sh
+build serve: serve
+
+default out/html/git
+build out/html/git: copy /usr/share/webapps/cgit/cgit
+
+# TARGETS
+# =======
+
+# static
+$[[ sh bin/target.sh ]]

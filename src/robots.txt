@@ -1,4 +1,5 @@
 User-agent: *
 
-Disallow: /git/
-Disallow: /txt/
+Disallow: /*/snapshot/*
+Disallow: /txt/*
+Allow: /

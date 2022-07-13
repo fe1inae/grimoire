@@ -2,7 +2,7 @@
 
 Elaina (felinae) she/her
 
-=> /ass/fel_small.png current avatar
+=> /pic/fel_small.png current avatar
 
 perma lurking adhd computer cat. currently interested in documentation,
 personal(ized) computing, and simplicity.
@@ -11,7 +11,7 @@ personal(ized) computing, and simplicity.
 
 # pages
 
-=> /repos.{{ext}}     git urls
+=> https://ulthar.cat/git/ git repos
 => /bookmarks.{{ext}} bookmarks
 
 => /doc/ blogs/rants/gemlog

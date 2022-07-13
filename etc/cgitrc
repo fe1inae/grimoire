@@ -1,0 +1,6 @@
+css=/css/cgit.css
+logo=/pic/fel_small.png
+
+strict-export=git-daemon-export-ok
+remove-suffix=1
+scan-path=/var/git
