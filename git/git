@@ -3,7 +3,7 @@
 # SETTINGS
 # --------
 
-. ENV
+. CONF
 
 # IMPORTS
 # -------

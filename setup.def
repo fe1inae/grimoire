@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# SETTINGS
-# --------
-
-cat > git/ENV <<EOF
-GIT_ROOT="$HOME/git"
-EOF

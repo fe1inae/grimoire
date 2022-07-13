@@ -10,13 +10,6 @@ cat_file() {
 	fi
 }
 
-readmes="
-readme
-.readme
-README
-README.md
-"
-
 create_commit() {
 	repo="${1}.git"
 	cd "${GIT_ROOT}/${repo}"
@@ -31,7 +24,7 @@ create_commit() {
 	printf '=> d/ diff\n'
 
 	printf '## readme\n\n'
-	for f in $readmes; do
+	for f in $README_LIST; do
     	cat_file "$f" && break
     done
 	printf '\n'
