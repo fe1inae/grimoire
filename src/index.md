@@ -2,9 +2,9 @@ title: ulthar cat
 
 # about
 
-Elaina (felinae) she/her
+felinae she/her
 
-![current avatar](/pic/fel_small.png =64x64)
+![current avatar](/pic/fel.png =256x256)
 
 perma lurking adhd computer cat. currently interested in documentation,
 personal(ized) computing, and simplicity.
