@@ -10,9 +10,9 @@ SRC=$(shell find src/ -type f)
 OUT=$(SRC:src/%=$(DIR)/%)
 
 MISC=                     \
-	$(DIR)/pkg            \
 	$(DIR)/style.css      \
 	$(DIR)/unscii-16.woff
+	
 
 # GENERATORS
 # ==========
@@ -22,7 +22,7 @@ all: $(OUT) $(MISC)
 $(DIR)/%.gmi: src/%.gmi FRC
 	@mkdir -p $(@D)
 	@cat $(<)                  \
-		| awk -f fmt/shell.awk \
+		| awk -f bin/shell.awk \
 		| fold -s              \
 		> $(@)
 	@echo $(@)
