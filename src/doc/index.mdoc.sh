@@ -11,7 +11,7 @@ for f in *; do
 	case "$f" in
 	*.mdoc)
 		printf '.Lk %s %s - %s\n' \
-			"${f%.mdoc}.html" \
+			"${f%.mdoc}.ext" \
 			"$(date -d @$(stat -c %Y "$f") +%Y%m%d)" \
 			"${f%.mdoc}"
 		;;

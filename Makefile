@@ -1,8 +1,8 @@
 .POSIX:
 .SUFFIXES:
-.PHONY: all test 
+.PHONY: all force test check fmt
 
-WWW=$(PUBLIC)/www/html
+WWW=$(PUBLIC)/www
 REPO=/home/fel/git
 
 E= \
@@ -11,17 +11,17 @@ E= \
 	GITURL=https://ulthar.cat/git
 
 all:
-	@$(E) sh bin/generate.sh -t $(WWW)
+	@$(E) sh bin/html/generate.sh -t $(WWW)/html
+	@$(E) sh bin/gmni/generate.sh -t $(WWW)/gmni
 
 force:
-	@$(E) sh bin/generate.sh -t $(WWW) -f
+	@$(E) sh bin/html/generate.sh -t $(WWW)/html -f
+	@$(E) sh bin/gmni/generate.sh -t $(WWW)/gmni -f
 
 test:
-	@$(E) sh bin/generate.sh -t test -v
+	@$(E) sh bin/html/generate.sh -t test/html -v -f
+	@$(E) sh bin/gmni/generate.sh -t test/gmni -v -f
 	
-serv:
-	cd test && darkhttpd .
-
 check:
 	@shellcheck                     \
 		-s sh                       \
@@ -32,7 +32,7 @@ check:
 		-o deprecate-which          \
 		-o quote-safe-variables     \
 		-o require-variable-braces  \
-		bin/*
+		bin/lib.sh bin/gmni/* bin/html/*
 	
 fmt:
 	@shfmt        \
@@ -41,4 +41,5 @@ fmt:
 		-bn       \
 		-sr       \
 		-kp       \
-		-w bin/*
+		-w        \
+		bin/lib.sh bin/gmni/* bin/html/*

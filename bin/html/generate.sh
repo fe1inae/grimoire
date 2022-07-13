@@ -29,45 +29,7 @@ VERBOSE="${OPT_VERBOSE}"
 # UTIL FUNCS
 # ==========
 
-#shellcheck disable=SC2254
-match() {
-	case "${1}" in
-	${2}) return 0 ;;
-	*) return 1 ;;
-	esac
-}
-
-# log
-log() {
-	if [ -n "${NO_COLOR:-""}" ]; then
-		printf '[%s] %s\n' \
-			"${P:-LOG}" "$1"
-	else
-		printf '%b %s \033[0m %s\n' \
-			"${C:-\033[7;1m}" "${P:-LOG}" "$1" \
-			> /dev/stderr
-	fi >&2
-}
-notify() { C="\033[7;35m" P="NOTE" log "$1"; }
-lmake() { C="\033[7;32m" P="MAKE" log "$(realpath "$1")"; }
-lskip() {
-	if [ "${VERBOSE}" = "1" ]; then
-		C="\033[7;33m" P="SKIP" log "$(realpath "$1")"
-	fi
-}
-
-# x is newer than y
-isolder() {
-	if [ "${FORCE}" = "1" ]; then
-		return 1
-	else
-		test \
-			"$(stat -c %Y "$1" 2> /dev/null)" \
-			-lt \
-			"$(stat -c %Y "$2" 2> /dev/null)" \
-			2> /dev/null
-	fi
-}
+. bin/lib.sh
 
 # FUNCTIONS
 # =========
@@ -75,7 +37,7 @@ isolder() {
 # generate an html page
 mkhtml() {
 	tr -d '\n' < etc/head.html
-	sh bin/mksidebar.sh "${f}"
+	sh bin/html/sidebar.sh "${f}"
 	printf '<article>'
 	sed 's/\.ext/.html/g' "${f}" \
 		| mandoc \
@@ -89,7 +51,7 @@ mkhtml() {
 # fix externally generated html (stagit)
 fixhtml() {
 	tr -d '\n' < etc/head.html
-	sh bin/mksidebar.sh "${f}"
+	sh bin/html/sidebar.sh "${f}"
 	printf '<article>'
 	cat "${f}"
 	printf '</article>'
@@ -105,7 +67,7 @@ fixhtml() {
 notify "SOURCE TREE"
 find src -type f | while IFS= read -r f; do
 	[ -e "${f}" ] || continue
-	out="tmp/${f#src/}"
+	out="tmp/html/${f#src/}"
 	ext="${f##*.}"
 	out="${out%."${ext}"}"
 	mkdir -p "${out%/*}"
@@ -140,15 +102,18 @@ repos="$(
 		d="${d%/*}"
 		name="${d#"${REPODIR}"/}"
 		name="${name%.git}"
-		mkdir -p "tmp/git/${name}"
+		mkdir -p "tmp/html/git/${name}"
 		(
-			cd "tmp/git/${name}"
-			if [ "$(git log -1 --pretty=%ct)" -lt "$(stat -c %Y log.html 2> /dev/null)" ] 2> /dev/null; then
+			cd "tmp/html/git/${name}"
+			if [ "$(cd "${d}" && git log -1 --pretty=%ct)" \
+				-lt \
+				"$(stat -c %Y log.html 2> /dev/null)" \
+				] && [ "${FORCE}" = 0 ] 2> /dev/null; then
 				lskip "."
 			else
 				lmake "."
 				stagit -u "${GITURL}/${name}/" "${d}"
-				ln -snf log.html index.html
+				cp -f log.html index.html
 				if [ -f "${d}/logo.png" ]; then
 					cp -f "${d}/logo.png" .
 				fi
@@ -183,19 +148,19 @@ $(
 	)
 </table>
 EOF
-) | tr -d '\n' > tmp/git/index.html
-lmake "tmp/git/index.html"
+) | tr -d '\n' > tmp/html/git/index.html
+lmake "tmp/html/git/index.html"
 
 # GENERATE MISC INDEX
 # ===================
 
 notify "MISC INDEXES"
-find tmp -type d | while IFS= read -r d; do
+find tmp/html -type d | while IFS= read -r d; do
 	[ -e "${d}/index.html" ] && continue
 	[ -e "${d}/index.mdoc" ] && continue
 	(
 		cd "${d}"
-		printf '<table><h1>index of %s</h1></table>' "${d#tmp}"
+		printf '<table><h1>index of %s</h1></table>' "${d#tmp/html}"
 		printf '<hr>'
 		printf '<table>'
 		for f in *; do
@@ -217,20 +182,21 @@ done
 # ===========
 
 notify "FINAL CONVERSION"
-find tmp -type f -o -type l | while IFS= read -r f; do
+find tmp/html -type f -o -type l | while IFS= read -r f; do
 	[ -e "${f}" ] || continue
 
 	# check for force flag on files
 	# and make output shiz
-	if match "$f" "*.frc"; then
-		tmp="${f%.frc}"
-		out="${WWW}/${tmp#tmp/}"
-		ext="${tmp##*.}"
+	name="${f}"
+	if match "${f}" "*.frc"; then
+		name="${f%.frc}"
+		out="${WWW}/${name#tmp/html/}"
+		ext="${name##*.}"
 		FORCE=1
 	else
-		FORCE="$OPT_FORCE"
-		out="${WWW}/${f#tmp/}"
-		ext="${f##*.}"
+		FORCE="${OPT_FORCE}"
+		out="${WWW}/${name#tmp/html/}"
+		ext="${name##*.}"
 	fi
 
 	# check if no extension, else add dot
@@ -244,7 +210,7 @@ find tmp -type f -o -type l | while IFS= read -r f; do
 	mkdir -p "${out%/*}"
 
 	# process and build files
-	case "${f}" in
+	case "${name}" in
 	*.mdoc)
 		if isolder "${f}" "${out}.html"; then
 			lskip "${out}.html"

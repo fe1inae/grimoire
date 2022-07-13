@@ -20,8 +20,8 @@ mklink() {
 }
 
 outname() {
-	oname="${1#tmp/}"
-	oname="${1#./tmp/}"
+	oname="${1#tmp/html/}"
+	oname="${1#./tmp/html/}"
 	oname="${WWW}/${oname}"
 	case "${oname}" in
 	*.mdoc) printf '%s.html\n' "${oname%.*}" ;;
@@ -30,7 +30,7 @@ outname() {
 	esac
 }
 
-WWW=tmp
+WWW=tmp/html
 
 idir="${1%/*}"
 
@@ -38,6 +38,7 @@ stack="."
 IFS='/'
 for e in ${idir}; do
 	stack="${stack}/${e}"
+	[ "${e}" = "tmp" ] && continue
 	for f in "${stack}"/*; do
 		#shellcheck disable=SC2310
 		if [ -d "${f}" ] \
