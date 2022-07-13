@@ -37,7 +37,7 @@ $(DIR)/%: src/% FRC
 	@cp -f $(<) $(@)
 	@echo $(@)
 
-$(DIR)/%: css/% FRC
+$(DIR)/%: etc/% FRC
 	@mkdir -p $(@D)
 	@cp -f $(<) $(@)
 	@echo $(@)
