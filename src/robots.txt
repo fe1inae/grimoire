@@ -1,4 +1,6 @@
 User-agent: *
 
 Disallow: /git/
+Disallow: /now/
+Disallow: /txt/
 Disallow: /x/
