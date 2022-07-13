@@ -5,6 +5,13 @@ Elaina (felinae) she/her
 perma lurking adhd computer cat. currently interested in documentation,
 personal(ized) computing, and simplicity.
 
+current main project (if anything could ever be considered that) are:
+
+* an "antisocial" linux flavor and accompanying ecosystem, though not currently
+uploaded anywhere since its so scattered and incomplete. currently mostly just
+in my head.
+* a font
+
 # pages
 
 => /contacts.ext  contacts

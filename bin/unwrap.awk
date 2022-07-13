@@ -20,7 +20,7 @@ NR == 1 { PREV=$0; next }
 		print PREV
 	else
 		if (TYPE == "IDK")
-			if (PTYPE == "IDK")
+			if (PTYPE == "IDK" || PTYPE == "LIST")
 				printf("%s ", PREV)
 			else
 				printf("%s\n", PREV)
