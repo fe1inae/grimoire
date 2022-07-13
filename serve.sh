@@ -33,7 +33,8 @@ done
 
 # copy cgit
 mkdir -p ${DEFAULT_IN}/cgi-bin
-cp -f /usr/share/webapps/cgit/cgit ${DEFAULT_IN}/cgi-bin/cgit
+cp -f /usr/share/webapps/cgit/cgit     ${DEFAULT_IN}/cgi-bin/cgit
+cp -f /usr/share/webapps/cgit/cgit.css ${DEFAULT_IN}/css/cgit.css
 
 # launch bwrap
 (exec env -i bwrap $(awk '{ sub(/#.*$/, ""); printf("%s ", $0) }' <<-EOF
