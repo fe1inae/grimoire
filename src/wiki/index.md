@@ -1,7 +1,6 @@
 title: fels wiki
 css:   ../css/style.css
 
-
 [%title]
 ========
 

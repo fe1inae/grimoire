@@ -7,8 +7,8 @@ felinae she/her
 
 ![current avatar](pic/fel.png =256x256)
 
-perma lurking adhd computer cat. currently interested in documentation,
-personal(ized) computing, and simplicity.
+perma lurking adhd computer cat. 
+fan of movement shooters, personal(ized) computing, emergent behavior, and cats
 
 [contacts](./contacts.md)
 
