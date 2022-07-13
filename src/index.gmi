@@ -14,10 +14,8 @@ slowly cultivating an ecosystem of my preferences
 ## pages
 
 => git/ git
-=> wiki/ wiki
+=> doc/ wiki
 
-=> log/ journal
+=> etc/ misc
 => now/ status
-
 => txt/ pastebin
-=> etc/ random

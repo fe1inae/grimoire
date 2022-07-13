@@ -62,7 +62,7 @@ blockquote:before {
 li:before {
 	color: #717171;
 	content: "* ";
-	margin-left: -2ch;
+	margin-left: -6ch;
 }
 
 li {

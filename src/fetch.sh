@@ -82,7 +82,8 @@ $(BG F2 F2 BE)$(FG $BLACK) HTTPS  $DEFAULT https://ulthar.cat/
 
 $(BG A0 E4 E4)$(FG $BLACK) CONTACT $DEFAULT felinae@ulthar.cat
 
-$MISC OS     $DEFAULT alpine linux
+$MISC OS     $DEFAULT alpine linux edge
+$MISC TERM   $DEFAULT tmux-256color
 $MISC SHELL  $DEFAULT busybox ash
 $MISC VISUAL $DEFAULT kakoune
 $MISC EDITOR $DEFAULT sam -d

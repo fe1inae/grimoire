@@ -29,7 +29,8 @@ MSG="
 
  CONTACT  felinae@ulthar.cat
 
- OS      alpine linux
+ OS      alpine linux edge
+ TERM    tmux-256color
  SHELL   busybox ash
  VISUAL  kakoune
  EDITOR  sam -d
