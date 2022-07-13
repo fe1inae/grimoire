@@ -13,7 +13,6 @@ about-filter=/lib/cgit/filter/format.sh
 readme=:README
 readme=:README.md
 
-
 # repo
 clone-url=git://ulthar.cat/$CGIT_REPO_URL
 snapshots=tar.gz zip
@@ -23,11 +22,11 @@ enable-commit-graph=1
 enable-subject-links=1
 enable-follow-links=1
 enable-index-owner=0
+enable-http-clone=1
 repository-sort=age
 branch-sort=age
 remove-suffix=1
 enable-git-config=1
-
 
 # repo discovery
 strict-export=git-daemon-export-ok
