@@ -1,3 +1,5 @@
+title: ulthar cat
+
 # about
 
 Elaina (felinae) she/her
@@ -7,12 +9,12 @@ Elaina (felinae) she/her
 perma lurking adhd computer cat. currently interested in documentation,
 personal(ized) computing, and simplicity.
 
-[ contacts](/contacts.[%extension])
+[contacts](/contacts.[%extension])
 
 # pages
 
-[git repos](https://ulthar.cat/cgi-bin/cgit)  
+[git repos](/cgi-bin/cgit)
 
-[bookmarks](/bookmarks.[%extension])  
-[blogs/rants/gemlog](/doc/)  
-[miscellaneous posts](/etc/)  
+[personal wiki](/wiki/)  
+[blog and/or rants](/blog/)  
+[miscellaneous posts](/misc/)  

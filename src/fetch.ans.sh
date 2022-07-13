@@ -58,18 +58,16 @@ H=$(($MAXLEN/3))
 # COLORS
 # ------
 
-DEFAULT="$(FG E5 E5 E5)$(BG 22 22 22)"
+WHITE="FF FF FF"
+BLACK="00 00 00"
 
-WHITE="E5 E5 E5"
-BLACK="22 22 22"
-
+DEFAULT="$(FG ${WHITE})$(BG ${BLACK})"
 
 # TYPES
 # -----
 
-FADE="$(FG A0 A0 A0)$(BG $BLACK)"
-ME="$(BG E4 A0 E4)$(FG $BLACK)"
-MISC="$(BG 37 37 37)$(FG $WHITE)"
+ME="$(BG FF CC FF)$(FG $BLACK)"
+MISC="$(BG 22 22 22)$(FG $WHITE)"
 
 # CONTENTS
 # --------
@@ -78,50 +76,27 @@ MSG="
 $ME NICKNAME $DEFAULT felinae
 $ME PRONOUNS $DEFAULT she/her
 
-$(BG BE F2 F2)$(FG $BLACK) REPOS  $DEFAULT https://ulthar.cat/git/
 
-$(BG A0 E4 E4)$(FG $BLACK) CONTACT $DEFAULT felinae@ulthar.cat
+
+$(BG CC FF FF)$(FG $BLACK) LINKS $DEFAULT
+$(BG ${BLACK})$(FG CC FF FF)|$DEFAULT https://ulthar.cat/cgi-bin/cgit/
+$(BG ${BLACK})$(FG CC FF FF)|$DEFAULT mailto:felinae@ulthar.cat
+$(BG ${BLACK})$(FG CC FF FF)|$DEFAULT https://sr.ht/~fel
+$(BG ${BLACK})$(FG CC FF FF)|$DEFAULT fel@nixnet.social
+
+
 
 $MISC OS     $DEFAULT $OS
 $MISC TERM   $DEFAULT $TERM
 $MISC SHELL  $DEFAULT $SHELL
 $MISC EDITOR $DEFAULT $EDITOR
 $MISC VISUAL $DEFAULT $VISUAL
-
-$( tr -d '\n' <<EOF
-$DEFAULT
-$(FG F2 BE BE)   P
-$(FG F2 F2 BE)     A
-$(FG BE F2 BE)     S
-$(FG BE F2 F2)     T
-$(FG BE BE F2)     E
-$(FG F2 BE F2)     L
-$DEFAULT
-EOF
-)
-
-$( tr -d '\n' <<EOF
-$DEFAULT
-$(FG F2 C6 BE)      A
-$(FG C6 F2 BE)     N
-$(FG BE F2 C6)     S
-$(FG BE C6 F2)     I
-$(FG C6 BE F2)    -w-
-$DEFAULT
-EOF
-)
 "
 
 # WRITE SHIT
 # ----------
 
 printf '%s' "$DEFAULT"
-
-printf '%s┌' "$FADE"
-for i in $(seq 1 $(($MAXLEN-2))); do
-	printf '─'
-done
-printf '┐%s\n' "$RESET"
 
 i=1
 didder                                          \
@@ -141,17 +116,10 @@ didder                                          \
 	txtline="$(printf "$MSG" | sed -n "${i}p" | tr -d '\n')"
 	txtlen="$(printf '%s' "$txtline" | sed -E 's/\x1b\[[^mK]*[m|K]//g' | wc -m)"
 	imglen="$(printf '%s' "$imgline" | sed -E 's/\x1b\[[^mK]*[m|K]//g' | wc -m)"
-	printf '%s%s %s%s%*s%s\n'                   \
-		"$FADE│$DEFAULT"                        \
-		"$imgline" "$txtline" "$DEFAULT"        \
-		"$((MAXLEN-${imglen}-${txtlen}-3))" " " \
-		"$FADE│$RESET"
+	printf '%s %s%s%*s%s\n'                       \
+		"$imgline$DEFAULT" "$txtline" "$DEFAULT"  \
+		"$((MAXLEN-${imglen}-${txtlen}-3))" " "   \
+		"$RESET"
 
 	i=$((i+=1))
 done
-
-printf '%s└' "$FADE"
-for i in $(seq 1 $(($MAXLEN-2))); do
-	printf '─'
-done
-printf '┘%s\n' "$RESET"

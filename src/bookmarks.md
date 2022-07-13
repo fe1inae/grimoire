@@ -1,4 +1,5 @@
-# GEMINI
+gemini
+======
 
 <https://sr.ht/~adnano/astronaut/>
 
@@ -8,20 +9,23 @@
 
 > Tom aims to be a complete Gemini frontend for git repositories
 
-# RSS/FEEDS
+rss/feeds
+=========
 
 <https://codemadness.org/git/sfeed/file/README.html>
 
 minimal rss parser and interface. lots of utils, unixy. can parse and
 view gemlogs with marginal effort.
 
-# ART
+art
+===
 
 <https://ascii.mozz.us:7070/academy>
 
 ascii art tutorials and stuffs
 
-# SOFTWARE
+software
+========
 
 <https://github.com/ibara/oed>
 
@@ -35,7 +39,8 @@ baseline awk
 
 curses spreadsheet with vi like binds
 
-# GIT
+git
+===
 
 <https://git-scm.com/book/en/v2/Git-Tools-Bundling>
 

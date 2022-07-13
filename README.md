@@ -1,22 +1,6 @@
 grimoire
 ========
 
-personal site and glue for various things
-
-depends on
-----------
-
-- bubblewrap
-- busybox httpd
-- cgit
-- chafa
-- didder
-- highlight
-- kai
-- lowdown
-- ninja/samu
-- posix utils
-
 ```
 (\
  \`\
@@ -27,3 +11,21 @@ depends on
     ==).    \__________\
    (__)     ()__________)
 ```
+
+depends on
+----------
+
+- bubblewrap
+- busybox httpd
+- cgit
+- chafa
+- didder
+- highlight
+- lowdown
+- posix utils
+
+license
+-------
+
+everything tracked in this repository is in the public domain,
+unless stated otherwise.

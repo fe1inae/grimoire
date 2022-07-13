@@ -1,10 +1,11 @@
 #!/bin/sh
 set -eu
+cd "$(dirname "$(realpath "$0")")"
 
-DEFAULT_IN=${PWD}/out/html
+DEFAULT_IN=${PWD}/www
 DEFAULT_OUT=/www
 
-GIT_IN=/home/fel/git
+GIT_IN="${GIT_PATH:-"$HOME/git"}"
 
 DYNAMIC="
 awk
@@ -31,7 +32,7 @@ for f in $DYNAMIC; do
 done
 
 # launch bwrap
-(exec bwrap $(awk '{ sub(/#.*$/, ""); printf("%s ", $0) }' <<-EOF
+(exec env -i bwrap $(awk '{ sub(/#.*$/, ""); printf("%s ", $0) }' <<-EOF
 	# libraries
 	$(
 		for f in $DYNAMIC; do

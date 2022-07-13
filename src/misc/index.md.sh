@@ -1,6 +1,8 @@
 cd "$(dirname "${0}")" || true
 
 cat <<'EOF'
+title: fels documents
+
 misc
 ====
 
@@ -17,6 +19,6 @@ for f in *; do
 	*.sh)    url="${f%.sh}" ;;
 	*)       url="${f}" ;;
 	esac
-	name="$(printf '%s\n' "$url" | sed 's/-/ /g; s/\.[%extension]$//g')"
+	name="${url%.*}"
 	printf '[%s](%s)\n\n' "${name}" "${url}"
 done

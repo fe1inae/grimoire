@@ -1,6 +1,8 @@
 cd "$(dirname "${0}")" || true
 
 cat <<'EOF'
+title: fels blog
+
 posts
 =====
 
@@ -9,11 +11,11 @@ EOF
 for f in *; do
 	case "$f" in
 	*.md)
-		printf '[%s: %s - %s]([%%protocol]://ulthar.cat/doc/%s[%%extension])\n\n' \
+		printf '[%s]([%%protocol]://ulthar.cat/doc/%s[%%extension]): %s - %s\n\n' \
 			"$(lowdown -Xdate "${f}")" \
+			"${f%md}" \
 			"$(lowdown -Xtitle "${f}")" \
-			"$(lowdown -Xsummary "${f}")" \
-			"${f%md}"
+			"$(lowdown -Xsummary "${f}")"
 			
 		;;
 	esac
