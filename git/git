@@ -1,0 +1,67 @@
+#!/bin/sh -eu
+
+# SETTINGS
+# --------
+
+. ENV
+
+# IMPORTS
+# -------
+
+. lib/commit.sh
+. lib/commitlist.sh
+. lib/file.sh
+. lib/fileold.sh
+. lib/home.sh
+. lib/index.sh
+. lib/misc.sh
+
+# MAIN
+# ----
+
+# shellcheck disable=2086
+set -- $(split "$PATH_INFO" "/")
+
+case "$#" in
+# /
+0)
+	create_index
+	;;
+# /repo
+1)
+	create_home "$1"
+	;;
+# /repo/c
+# /repo/f
+2)
+	case "$2" in
+	c)
+		create_commitlist "$1"
+	;;
+	esac
+	;;
+# /repo/c/hash
+# /repo/f/file
+3)
+	case "$2" in
+	c)
+		create_commit "$1" "$3"
+	;;
+	f)
+		create_file "$1" "${PATH_INFO##/$1/f/}"
+	;;
+	esac
+	;;
+# /repo/f/a/b/c
+# /repo/c/hash/f/a/b/c
+*)
+	case "$2" in
+	f)
+		create_file "$1" "${PATH_INFO##/$1/f/}"
+	;;
+	c)
+		create_fileold "$1" "$3" "${PATH_INFO##/$1/c/$3/f/}"
+	;;
+	esac
+	;;
+esac

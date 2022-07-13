@@ -1,0 +1,146 @@
+# neat stuff
+# OS/KERNEL/DISTRO
+
+=> https://www.alpinelinux.org/ alpine
+
+lean small linux distro
+
+=> https://www.openbsd.org/ openbsd
+
+secure and well desgined unix
+
+=> http://9front.org/ 9front
+
+plan9 but still developed
+
+## COMPOSITORS/WMS
+
+
+=> https://gitlab.freedesktop.org/wlroots/wlroots wlroots
+
+makes writing wayland compositors feasible, has many standardized protocols
+
+=> https://github.com/riverwm/river/ river
+
+bspwm/dwm-esque for wayland
+
+=> https://github.com/buffet/kiwmi kiwmi
+
+like a wayland abstraction for lua
+
+## TERMINALS/UTILS
+
+
+=> https://codeberg.org/dnkl/foot foot
+
+fantastic terminal with sixels and client/server
+
+=> https://github.com/tmux/tmux tmux
+
+common but underappreciated and underused.
+
+## SHELLS
+
+
+=> https://git.busybox.net/busybox/tree/shell/ash.c busybox ash
+
+small posix shell included in busybox
+
+=> https://fishshell.com/ fish
+
+non-posix shell focused on interactivity
+
+## TEXT EDITORS/INTERFACES
+
+
+=> https://github.com/mawww/kakoune/ kakoune
+
+modal editor with focus on interactivity
+
+=> https://github.com/martanne/vis/ vis
+
+sam and vim smashed together, with a lua scriptable core
+
+## MAIL
+
+
+=> https://aerc-mail.org/ aerc
+
+extensible terminal client, works well with git
+
+=> https://github.com/emersion/hydroxide hydroxide
+
+open source protonmail bridge
+
+## COMMUNICATION
+
+
+=> https://github.com/tulir/gomuks gomuks
+
+tui matrix client
+
+## FILES
+
+
+=> https://github.com/fangfufu/httpdirfs httpdirfs
+
+http dir as a fuse filesystem
+
+=> https://github.com/syncthing/syncthing syncthing
+
+clean versatile file syncing. i use for lots of things
+
+## LIBRARIES
+
+
+=> https://github.com/nullgemm/termbox_next termbox_next
+
+termbox but from when it wasnt shit
+
+## LANGUAGES
+
+
+=> https://github.com/bakpakin/Fennel fennel
+
+lispy, makes writing lua not mind numbing
+
+=> https://github.com/janet-lang/janet janet
+
+small core decent stdlib bytecode lisp (clojurey)
+
+## DOCUMENTATION/WRITING
+
+
+=> https://git.sr.ht/~sircmpwn/scdoc scdoc
+
+minimal markdown-esque to mdoc with good utf8
+
+=> https://github.com/kristapsdz/lowdown lowdown
+
+markdown to html, gemini, man
+
+=> https://mandoc.bsd.lv/ mandoc
+
+simple trimmed down roff, intended for manpages
+
+=> https://pandoc.org/ pandoc
+
+fat convert nearly anything to nearly anything
+
+## WEB
+
+
+=> https://newsboat.org/ newsboat
+
+tui rss feed reader
+
+=> https://github.com/tats/w3m w3m
+
+tui web pager/browser
+
+## MISC
+
+
+=> https://github.com/rvaiya/keyd keyd
+
+keyboard remapping daemon through kernel (udev/uinput)
