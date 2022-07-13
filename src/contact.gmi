@@ -1,0 +1,19 @@
+# contact
+
+## email
+
+=> mailto:felinae@ulthar.cat primary
+
+## irc
+
+=> https://libera.chat fel - libera
+=> https://tilde.chat fel - tilde
+
+## fedi
+
+=> https://nixnet.social/fel primary
+in slow, intermittent process of finding and moving to self hosted
+
+## other
+
+on need to know basis :x
