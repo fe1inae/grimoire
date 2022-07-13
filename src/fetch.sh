@@ -20,7 +20,28 @@ RESET="$(printf '\033[0m')"
 # VARIABLES
 # ---------
 
-COLORS="#252121 #3e3333 #644a4a #996363 #cb7d7d #e4a0a0 #f2bebe #f9d6d6 #252121 #3e3333 #644c4a #996b63 #cb8c7d #e4aca0 #f2c6be #f9dad6 #252521 #3e3e33 #64644a #999963 #cbcb7d #e4e4a0 #f2f2be #f9f9d6 #212521 #333e33 #4c644a #6b9963 #8ccb7d #ace4a0 #c6f2be #daf9d6 #212521 #333e33 #4a644a #639963 #7dcb7d #a0e4a0 #bef2be #d6f9d6 #212521 #333e33 #4a644c #63996b #7dcb8c #a0e4ac #bef2c6 #d6f9da #212525 #333e3e #4a6464 #639999 #7dcbcb #a0e4e4 #bef2f2 #d6f9f9 #212125 #33333e #4a4c64 #636b99 #7d8ccb #a0ace4 #bec6f2 #d6daf9 #212125 #33333e #4a4a64 #636399 #7d7dcb #a0a0e4 #bebef2 #d6d6f9 #212125 #33333e #4c4a64 #6b6399 #8c7dcb #aca0e4 #c6bef2 #dad6f9 #252125 #3e333e #644a64 #996399 #cb7dcb #e4a0e4 #f2bef2 #f9d6f9 #252121 #3e3333 #644a4c #99636b #cb7d8c #e4a0ac #f2bec6 #f9d6da #222222 #373737 #555555 #7a7a7a #a0a0a0 #bebebe #d5d5d5 #e5e5e5"
+COLORS="\
+#252121 #3e3333 #644a4a #996363 #cb7d7d \
+#e4a0a0 #f2bebe #f9d6d6 #252121 #3e3333 \
+#644c4a #996b63 #cb8c7d #e4aca0 #f2c6be \
+#f9dad6 #252521 #3e3e33 #64644a #999963 \
+#cbcb7d #e4e4a0 #f2f2be #f9f9d6 #212521 \
+#333e33 #4c644a #6b9963 #8ccb7d #ace4a0 \
+#c6f2be #daf9d6 #212521 #333e33 #4a644a \
+#639963 #7dcb7d #a0e4a0 #bef2be #d6f9d6 \
+#212521 #333e33 #4a644c #63996b #7dcb8c \
+#a0e4ac #bef2c6 #d6f9da #212525 #333e3e \
+#4a6464 #639999 #7dcbcb #a0e4e4 #bef2f2 \
+#d6f9f9 #212125 #33333e #4a4c64 #636b99 \
+#7d8ccb #a0ace4 #bec6f2 #d6daf9 #212125 \
+#33333e #4a4a64 #636399 #7d7dcb #a0a0e4 \
+#bebef2 #d6d6f9 #212125 #33333e #4c4a64 \
+#6b6399 #8c7dcb #aca0e4 #c6bef2 #dad6f9 \
+#252125 #3e333e #644a64 #996399 #cb7dcb \
+#e4a0e4 #f2bef2 #f9d6f9 #252121 #3e3333 \
+#644a4c #99636b #cb7d8c #e4a0ac #f2bec6 \
+#f9d6da #222222 #373737 #555555 #7a7a7a \
+#a0a0a0 #bebebe #d5d5d5 #e5e5e5"
 
 SYMBOLS="half"
 
