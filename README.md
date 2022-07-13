@@ -15,8 +15,8 @@ grimoire
 build dependencies
 ------------------
 
-- lowdown
-- posix utils
+- lua
+- luafilesystem
 
 webserver dependencies
 ----------------------

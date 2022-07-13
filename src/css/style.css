@@ -17,12 +17,8 @@ body {
 a         { background-color: #000; color: #fff; text-decoration: none; }
 a:hover   { background-color: #fdf; color: #000; }
 
-a::before, a.internal::before { content: "{"; }
-a::after,  a.internal::after  { content: "}"; }
+a::before, a.url::before { content: "{"; }
+a::after,  a.url::after  { content: "}"; }
 
-a.external::before { content: "<"; }
-a.external::after  { content: ">"; }
-
-/* inputs (rare) */
-input[type=checkbox] { pointer-events: none; } /* TODO: figure out how to style */
-
+a.ref::before { content: "<"; }
+a.ref::after  { content: ">"; }
