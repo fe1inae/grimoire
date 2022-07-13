@@ -20,5 +20,5 @@ for f in *; do
 	*)       url="${f}" ;;
 	esac
 	name="${url%.*}"
-	printf '[%s](%s)\n\n' "${name}" "${url}"
+	printf '[%s](./%s)\n\n' "${name}" "${url}"
 done

@@ -11,7 +11,7 @@ EOF
 for f in *; do
 	case "$f" in
 	*.md)
-		printf '[%s]([%%protocol]://ulthar.cat/doc/%s[%%extension]): %s - %s\n\n' \
+		printf '[%s](./%s[%%extension]): %s - %s\n\n' \
 			"$(lowdown -Xdate "${f}")" \
 			"${f%md}" \
 			"$(lowdown -Xtitle "${f}")" \
