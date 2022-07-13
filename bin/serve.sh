@@ -22,11 +22,13 @@ GIT_IN=/home/fel/git
 	--ro-bind $(which sh)   /bin/sh 
 	--ro-bind $(which tar)  /bin/tar
 	--ro-bind $(which tr)   /bin/tr
+	--ro-bind $(which gzip) /bin/gzip
 
 	# bin
 	--ro-bind $(which althttpd)  /bin/althttpd
 	--ro-bind $(which lowdown)   /bin/lowdown
 	--ro-bind $(which highlight) /bin/highlight
+	--ro-bind $(which mandoc)    /bin/mandoc
 	--ro-bind $(which mandoc)    /bin/mandoc
 
 	# sys
@@ -42,6 +44,7 @@ GIT_IN=/home/fel/git
 	--ro-bind ${GIT_IN}               /var/git
 	--ro-bind ${PWD}/etc/cgit/cgitrc  /etc/cgitrc
 	--ro-bind ${PWD}/etc/cgit/filter  /lib/cgit/filter
+	--dir /cache/cgit
 
 	# highlight
 	--ro-bind /etc/highlight          /etc/highlight

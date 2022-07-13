@@ -43,8 +43,10 @@ build push: push
 rule serve: sh bin/serve.sh
 build serve: serve
 
-default out/html/git
+default cgit
+build cgit: phony out/html/git out/html/css/cgit.css
 build out/html/git: copy /usr/share/webapps/cgit/cgit
+build out/html/css/cgit.css: copy /usr/share/webapps/cgit/cgit.css
 
 # TARGETS
 # =======
