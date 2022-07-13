@@ -1,0 +1,17 @@
+# styling
+css=/css/cgit.css
+logo=/pic/fel_small.png
+
+# filters
+source-filter=/lib/cgit/filter/highlight.sh
+about-filter=/lib/cgit/filter/format.sh
+
+# readmes
+readme=:README
+readme=:README.md
+
+# repos
+clone-url=git://ulthar.cat/$CGIT_REPO_URL
+strict-export=git-daemon-export-ok
+remove-suffix=1
+scan-path=/var/git

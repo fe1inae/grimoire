@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# correct relative links
+sed 's;(\./;(../plain/;g' - \
+	| lowdown -Thtml -o - -

@@ -2,6 +2,7 @@ body {
 	background-color: #222222;
 	color: #e5e5e5;
 }
+
 div#cgit {
 	padding: 0em;
 	margin: 0em;
@@ -13,7 +14,7 @@ div#cgit {
 }
 
 div#cgit a {
-	color: blue;
+	color: #a0a0e4;
 	text-decoration: none;
 }
 
@@ -80,13 +81,13 @@ div#cgit table.tabs td {
 
 div#cgit table.tabs td a {
 	padding: 2px 0.75em;
-	color: #7a7a7a;
+	color: #d5d5d5;
 	font-size: 110%;
 }
 
 div#cgit table.tabs td a.active {
-	color: #e5e5e5;
-	background-color: #f2bef2;
+	color: #222222;
+	background-color: #d5d5d5;
 }
 
 div#cgit table.tabs a[href^="http://"]:after, div#cgit table.tabs a[href^="https://"]:after {
@@ -168,10 +169,6 @@ div#cgit table.list tr.nohover-highlight:hover:nth-child(odd) {
 
 div#cgit table.list th {
 	font-weight: bold;
-	/* color: #f2bef2;
-	border-top: dashed 1px #888;
-	border-bottom: dashed 1px #888;
-	*/
 	padding: 0.1em 0.5em 0.05em 0.5em;
 	vertical-align: baseline;
 }
@@ -279,7 +276,7 @@ div#cgit div#blob {
 }
 
 div#cgit div.error {
-	color: red;
+	color: #e4a0a0;
 	font-weight: bold;
 	margin: 1em 2em;
 }
@@ -402,8 +399,8 @@ div#cgit div.cgit-panel {
 
 div#cgit div.cgit-panel table {
 	border-collapse: collapse;
-	border: solid 1px #aaa;
-	background-color: #555555;
+	border: solid 1px #a0a0a0;
+	background-color: #252525;
 }
 
 div#cgit div.cgit-panel th {
@@ -471,8 +468,8 @@ div#cgit div.diffstat-header {
 
 div#cgit table.diffstat {
 	border-collapse: collapse;
-	border: solid 1px #aaa;
-	background-color: #555555;
+	border: solid 1px #a0a0a0;
+	background-color: #252525;
 }
 
 div#cgit table.diffstat th {
@@ -495,19 +492,19 @@ div#cgit table.diffstat td.mode {
 
 div#cgit table.diffstat td span.modechange {
 	padding-left: 1em;
-	color: red;
+	color: #e4a0a0;
 }
 
 div#cgit table.diffstat td.add a {
-	color: green;
+	color: #a0e4a0;
 }
 
 div#cgit table.diffstat td.del a {
-	color: red;
+	color: #e4a0a0;
 }
 
 div#cgit table.diffstat td.upd a {
-	color: blue;
+	color: #a0a0e4;
 }
 
 div#cgit table.diffstat td.graph {
@@ -558,11 +555,11 @@ div#cgit table.diff td div.hunk {
 }
 
 div#cgit table.diff td div.add {
-	color: green;
+	color: #a0e4a0;
 }
 
 div#cgit table.diff td div.del {
-	color: red;
+	color: #e4a0a0;
 }
 
 div#cgit .sha1 {
@@ -625,24 +622,23 @@ div#cgit ul.pager .current {
 }
 
 div#cgit span.age-mins {
-	font-weight: bold;
-	color: #a0e4a0;
+	color: #e5e5e5;
 }
 
 div#cgit span.age-hours {
-	color: #a0e4a0;
+	color: #d5d5d5;
 }
 
 div#cgit span.age-days {
-	color: #7dcb7d;
+	color: #bebebe;
 }
 
 div#cgit span.age-weeks {
-	color: #555555;
+	color: #a0a0a0;
 }
 
 div#cgit span.age-months {
-	color: #f2bef2;
+	color: #7a7a7a;
 }
 
 div#cgit span.age-years {
@@ -674,7 +670,7 @@ div#cgit div.footer a:hover {
 }
 
 div#cgit a.branch-deco {
-	color: #e5e5e5;
+	color: #222222 !important;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
 	background-color: #a0e4a0;
@@ -682,7 +678,7 @@ div#cgit a.branch-deco {
 }
 
 div#cgit a.tag-deco {
-	color: #e5e5e5;
+	color: #222222 !important;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
 	background-color: #e4e4a0;
@@ -690,7 +686,7 @@ div#cgit a.tag-deco {
 }
 
 div#cgit a.tag-annotated-deco {
-	color: #e5e5e5;
+	color: #222222 !important;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
 	background-color: #e4a0a0;
@@ -698,7 +694,7 @@ div#cgit a.tag-annotated-deco {
 }
 
 div#cgit a.remote-deco {
-	color: #e5e5e5;
+	color: #222222 !important;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
 	background-color: #f2bef2;
@@ -706,7 +702,7 @@ div#cgit a.remote-deco {
 }
 
 div#cgit a.deco {
-	color: #e5e5e5;
+	color: #222222 !important;
 	margin: 0px 0.5em;
 	padding: 0px 0.25em;
 	background-color: #e4a0a0;
@@ -808,8 +804,8 @@ div#cgit table.ssdiff td {
 	font-family: monospace;
 	white-space: pre;
 	padding: 1px 4px 1px 4px;
-	border-left: solid 1px #aaa;
-	border-right: solid 1px #aaa;
+	border-left: solid 1px #a0a0a0;
+	border-right: solid 1px #a0a0a0;
 }
 
 div#cgit table.ssdiff td.add {
@@ -869,13 +865,13 @@ div#cgit table.ssdiff td.lineno {
 div#cgit table.ssdiff td.hunk {
 	color: #e5e5e5;
 	background-color: #d6d6f9;
-	border-top: solid 1px #aaa;
-	border-bottom: solid 1px #aaa;
+	border-top: solid 1px #a0a0a0;
+	border-bottom: solid 1px #a0a0a0;
 }
 
 div#cgit table.ssdiff td.head {
-	border-top: solid 1px #aaa;
-	border-bottom: solid 1px #aaa;
+	border-top: solid 1px #a0a0a0;
+	border-bottom: solid 1px #a0a0a0;
 }
 
 div#cgit table.ssdiff td.head div.head {
@@ -884,7 +880,7 @@ div#cgit table.ssdiff td.head div.head {
 }
 
 div#cgit table.ssdiff td.foot {
-	border-top: solid 1px #aaa;
+	border-top: solid 1px #a0a0a0;
 	border-left: none;
 	border-right: none;
 	border-bottom: none;
@@ -897,3 +893,32 @@ div#cgit table.ssdiff td.space {
 div#cgit table.ssdiff td.space div {
 	min-height: 3em;
 }
+
+form select,
+form input {
+	background-color: #252525;
+	color: #e5e5e5;
+	border: 1px solid #a0a0a0;
+}
+
+/* highlights */
+pre.hl { white-space: pre-wrap; }
+
+/* primary */
+.hl.com { color: #a0a0a0; } /* multiline comment */
+.hl.def { color: #e5e5e5; } /* default */
+.hl.esc { color: #f2bebe; } /* escape character */
+.hl.ipl { color: #f2bef2; } /* interpolation */
+.hl.num { color: #d6f9f9; } /* number */
+.hl.opt { color: #e5e5e5; } /* operator */
+.hl.ppc { color: #f9f9d6; } /* preprocessor */
+.hl.pps { color: #d6d6f9; } /* preprocessor string */
+.hl.slc { color: #a0a0a0; } /* comment */
+.hl.sng { color: #bebef2; } /* string */
+.hl.ws  { color: #e5e5e5; } /* whitespace */
+
+/* keyword groups (all unsure) */
+.hl.kwa { color: #f9d6f9; } /* builtin functions */
+.hl.kwb { color: #f2bebe; } /* types */
+.hl.kwc { color: #d6f9f9; } /* keywords */
+.hl.kwd { color: #d6f9f9; } /* keywords 2 ?? */
