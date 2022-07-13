@@ -1,5 +1,6 @@
 
 
+
 @font-face {
 	font-family: 'unscii';
 	src: url('/unscii-16.woff') format('woff');
@@ -17,7 +18,7 @@ body {
 	margin: auto;
 	max-width: max-content;
 	text-overflow: ellipsis;
-	overflow: hidden;
+	overflow-x: hidden;
 	white-space: nowrap;
 }
 
@@ -84,7 +85,7 @@ a {
 pre {
 	counter-reset: line;
 	font-family: inherit;
-	line-height: 1;
+	line-height: 1.25;
 }
 
 input {
