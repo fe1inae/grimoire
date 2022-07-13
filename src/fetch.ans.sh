@@ -5,16 +5,16 @@
 
 FG() {
 	printf '\033[38;2;%s;%s;%sm'             \
-		"$(printf 'ibase=16; %s' "$1" | bc)" \
-		"$(printf 'ibase=16; %s' "$2" | bc)" \
-		"$(printf 'ibase=16; %s' "$3" | bc)"
+		"$(printf 'ibase=16; %s\n' "$1" | bc)" \
+		"$(printf 'ibase=16; %s\n' "$2" | bc)" \
+		"$(printf 'ibase=16; %s\n' "$3" | bc)"
 }
 
 BG() {
 	printf '\033[48;2;%s;%s;%sm'             \
-		"$(printf 'ibase=16; %s' "$1" | bc)" \
-		"$(printf 'ibase=16; %s' "$2" | bc)" \
-		"$(printf 'ibase=16; %s' "$3" | bc)"
+		"$(printf 'ibase=16; %s\n' "$1" | bc)" \
+		"$(printf 'ibase=16; %s\n' "$2" | bc)" \
+		"$(printf 'ibase=16; %s\n' "$3" | bc)"
 }
 
 RESET="$(printf '\033[0m')"

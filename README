@@ -7,7 +7,12 @@ requires
 - althttpd
 - bubblewrap 
 - cgit
+- chafa
+- didder
+- highlight
+- imagemagick
 - kai
+- lowdown
 - ninja 
 - posix utils
 
