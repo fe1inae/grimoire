@@ -17,22 +17,13 @@ body {
 	margin: auto;
 	max-width: max-content;
 	text-overflow: ellipsis;
+	overflow: hidden;
 	white-space: nowrap;
 }
 
-p {
-	margin-bottom: 0em;
-	margin-top: 0em;
-}
-
-p:empty {
-	margin-bottom: 1em;
-	margin-top: 1em;
-}
-
 h1, h2, h3 {
-  font-size: 16px;
-  font-weight: normal;
+	font-size: 16px;
+	font-weight: normal;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	white-space: pre-wrap;
