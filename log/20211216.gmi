@@ -27,4 +27,4 @@ preproccesor, drawing text diagrams/plots etc. as such fits into my site
 workflow pretty well, other than having to make my own mdoc -> gemtext script
 myself
 
-=> https://git.ulthar.cat/dotfiles/file/bin/web/gem.html scuff gemini client
+=> /git/dotfiles/f/bin/web/gemini.awk scuff gemini client

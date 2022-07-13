@@ -17,7 +17,7 @@ create_fileold() {
 	hash="${2}"
 	path="${3}"
 	cd "${GIT_ROOT}/${repo}"
-	[ -f "git-daemon-export-ok" ] || continue
+	[ -f "git-daemon-export-ok" ] || return
 
 	printf '20 text/gemini\r\n'
 	printf '# %s/%s @ %s\n\n' "$name" "$path" "$hash"

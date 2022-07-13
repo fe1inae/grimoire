@@ -1,6 +1,6 @@
 html {
 	background-color: #222222;
-	color: #e2e2e2;
+	color: #e5e5e5;
 	font-family: unifont,monospace;
 	font-size: 16px;
 }
@@ -9,6 +9,8 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	width: 79ch;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 p {

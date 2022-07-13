@@ -4,10 +4,6 @@
 
 felinae – Elaina Thompson (she/her)
 
-i like software and reading, though i have a tough time maintaining an
-interest long enough to accomplish anything meaningful. currently i enjoy
-lisps, build systems, and documentation.
-
 ## contact
 
 => mailto:felinae@ulthar.cat

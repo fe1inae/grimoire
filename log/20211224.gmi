@@ -1,0 +1,27 @@
+# more gemini
+
+site is now all gemini.... quite enjoying it. was able to make a nice (imo) cgi 
+git interface relatively easily, which would have been much more jank in html. 
+i am quite liking it, my main todos now in this scope are being able to select 
+two commits and show their diffs and diffs in the commits page. i also really 
+want to find/make a cleaner implementation of what diagon does, which 
+i use primarily to generate unicode charts and graphics from a simple markup. 
+maybe i can just write something to parse dot(1) files... not sure. rich text 
+in plaintext (ironically) is underused imo, it looks quite pretty and can be 
+quite informative if used correctly.
+
+i need to get a new laptop possibly, im on some fringe ass 2 in 1 that has good 
+hardware, but seems to break every month or so. im sure its largely my fault 
+for messing with firmare and stuff so often, but still.. i think most things 
+would be more robust... almost switched to windows just for some stability (and 
+actually have all the drivers be available, webcam etc), but holy shit i went 
+off that quick. i have gotten too far used to linux, dont think i can use 
+windows in any case other than playing games. i feel i know how to make windows 
+much more bearable than most even, but its still insufferable. bweh, this is 
+the expected outcome, but i am perminently dissapointed in windows. dont even 
+think its just a programmer/computer person issue, i think its getting worse 
+for the average user. but im not interested enough nor have enough coherent 
+thoughts to rant about that.
+
+=> /git/ cgi git interface
+=> https://github.com/ArthurSonzogni/Diagon diagon

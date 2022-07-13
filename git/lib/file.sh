@@ -16,7 +16,7 @@ create_file() {
 	repo="${1}.git"
 	path="${2}"
 	cd "${GIT_ROOT}/${repo}"
-	[ -f "git-daemon-export-ok" ] || continue
+	[ -f "git-daemon-export-ok" ] || return
 
 	printf '20 text/gemini\r\n'
 	printf '# %s/%s\n\n' "$name" "$path"
@@ -28,9 +28,7 @@ create_file() {
 		print sprintf("% 4d] %s", N, $0)
 		N++
 	}
-	'
+	' | fold -w 79
 	printf '```\n'
 
 }
-
-

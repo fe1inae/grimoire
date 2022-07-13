@@ -2,7 +2,6 @@
 
 IMAGES="fel.png loki.png thor.png"
 
-
 if [ -z "$QUERY_STRING" ]; then
 	printf '20 text/gemini\r\n'
 	printf '# render image\n'

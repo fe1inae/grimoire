@@ -10,10 +10,17 @@ cat_file() {
 	fi
 }
 
+readmes="
+readme
+.readme
+README
+README.md
+"
+
 create_commit() {
 	repo="${1}.git"
 	cd "${GIT_ROOT}/${repo}"
-	[ -f "git-daemon-export-ok" ] || continue
+	[ -f "git-daemon-export-ok" ] || return
 	hash_s="$2"
 	name="$1"
 
@@ -21,19 +28,18 @@ create_commit() {
 	printf '# %s @ %s\n' "$name" "$hash_s"
 	printf '\n'
 
+	printf '=> d/ diff\n'
+
 	printf '## readme\n\n'
-	printf '```\n'
-	cat_file    "$hash_s" "README.gmi" \
-	|| cat_file "$hash_s" "README"     \
-	|| cat_file "$hash_s" "README.txt" \
-	|| cat_file "$hash_s" "README.md"  \
-	|| printf 'nil\n'
-	printf '```\n'
+	for f in $readmes; do
+    	cat_file "$f" && break
+    done
 	printf '\n'
 
 	printf '## files\n\n'
 	git ls-files --with-tree "$hash_s" | while read -r line; do
-		printf '=> f/%s\n' "$line"
+		printf '=> f/%s\n' "$line" \
+			| sed -E 's/(.{76}).{3}.*/\1.../g'
 	done
 	printf '\n'
 }

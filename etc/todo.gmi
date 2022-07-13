@@ -1,0 +1,5 @@
+# todo
+(fel jargon & incoherencies warning)
+
+* patch astronaut, tab/ret bind
+* /git add difs

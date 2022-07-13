@@ -6,9 +6,3 @@
 cat > git/ENV <<EOF
 GIT_ROOT="$HOME/git"
 EOF
-
-
-# SYMLINK
-# -------
-
-ln -snvf "$HOME/pkg/apk" pkg

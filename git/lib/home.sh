@@ -10,10 +10,17 @@ cat_file() {
 	fi
 }
 
+readmes="
+readme
+.readme
+README
+README.md
+"
+
 create_home() {
 	repo="${1}.git"
 	cd "${GIT_ROOT}/${repo}"
-	[ -f "git-daemon-export-ok" ] || continue
+	[ -f "git-daemon-export-ok" ] || return
 	name="${1}"
 	shift
 
@@ -22,24 +29,23 @@ create_home() {
 	printf '\n'
 
 	printf '## readme\n\n'
-	printf '```\n'
-	cat_file    "README.gmi" \
-	|| cat_file "README"     \
-	|| cat_file "README.txt" \
-	|| cat_file "README.md" \
-	|| printf 'nil\n'
-	printf '```\n'
+	for f in $readmes; do
+    	cat_file "$f" && break
+    done
 	printf '\n'
 
 	printf '## files\n\n'
 	git ls-files --with-tree HEAD | while read -r line; do
-		printf '=> f/%s\n' "$line"
-	done
+		printf '=> f/%s\n' "$line" \
+			| sed -E 's/(.{76}).{3}.*/\1.../g'
+	done | head -n 20
+	printf '=> f/ ...\n'
 	printf '\n'
 
 	printf '## commits\n\n'
-	git log -5 --format="%h %cs %s" | while read -r hash date desc; do
-		printf '=> c/%s/ %s %s\n' "$hash" "$date" "$desc"
+	git log -10 --format="%h %cs %s" | while read -r hash date desc; do
+		printf '=> c/%s/ %s %s\n' "$hash" "$date" "$desc" \
+			| sed -E 's/(.{76}).{3}.*/\1.../g'
 	done
 	printf '=> c/       ...\n'
 	printf '\n'

@@ -23,7 +23,7 @@ create_index() {
         					"$(cat "${repo}/description")"
     done | sort -nr | awk -F'|' -e '
     {
-        print "\n=> " $2
+        print "\n=> " $2 "/"
         print $1 " - " $3
     }
     '
