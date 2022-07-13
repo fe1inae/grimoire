@@ -1,7 +1,11 @@
 #!/bin/sh
 set -eu
 
-f="$(printf '%s\n' "$1" | sed 's/\.gmi/.html/')"
+f="$(
+	printf '%s\n' "$1" \
+	| sed 's/\.gmi/.html/' \
+	| sed 's;tmp/;;'
+)"
 
 printf '<table class="header">'
 printf '<tr>'

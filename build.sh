@@ -89,8 +89,6 @@ configure()
 # ====
 
 # clean danglies from previous run
-# ---------------------------------
-
 if [ -e .ninja_build ]; then
 	while read -r cmd fout _ fin; do
 		[ "${cmd}" = "build" ] || continue
@@ -102,8 +100,15 @@ if [ -e .ninja_build ]; then
 	done < .ninja_build
 fi
 
-# generate build script and run
-# -----------------------------
+# parse arguments
+if [ "${1:-no}" = "push" ] && [ -n "${PUBLIC:-""}" ]; then
+	PUSH=1
+	shift
+fi
 
+# generate build script and run
 configure > .ninja_build
 ninja -f .ninja_build "$@"
+
+# push to site
+[ "${PUSH:-0}" = "1" ] && rsync -rv --delete out/* "${PUBLIC}/www"
