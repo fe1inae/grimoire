@@ -62,9 +62,9 @@ isolder() {
 		return 1
 	else
 		test \
-			"$(stat -c %Y "$1" 2>/dev/null)" \
+			"$(stat -c %Y "$1" 2> /dev/null)" \
 			-lt \
-			"$(stat -c %Y "$2" 2>/dev/null)" \
+			"$(stat -c %Y "$2" 2> /dev/null)" \
 			2> /dev/null
 	fi
 }
@@ -110,7 +110,7 @@ find src -type f | while IFS= read -r f; do
 	out="${out%."${ext}"}"
 	mkdir -p "${out%/*}"
 	case "${f}" in
-	*.sh) 
+	*.sh)
 		if isolder "${f}" "${out}"; then
 			lskip "${out}"
 		else
@@ -118,7 +118,7 @@ find src -type f | while IFS= read -r f; do
 			sh "${f}" > "${out}"
 		fi
 		;;
-	*) 
+	*)
 		if isolder "${f}" "${out}.${ext}"; then
 			lskip "${f}.${ext}"
 		else
@@ -143,7 +143,7 @@ repos="$(
 		mkdir -p "tmp/git/${name}"
 		(
 			cd "tmp/git/${name}"
-			if [ "$(git log -1 --pretty=%ct)" -lt "$(stat -c %Y log.html 2>/dev/null)" ] 2>/dev/null; then
+			if [ "$(git log -1 --pretty=%ct)" -lt "$(stat -c %Y log.html 2> /dev/null)" ] 2> /dev/null; then
 				lskip "."
 			else
 				lmake "."
@@ -232,20 +232,20 @@ find tmp -type f -o -type l | while IFS= read -r f; do
 		out="${WWW}/${f#tmp/}"
 		ext="${f##*.}"
 	fi
-	
+
 	# check if no extension, else add dot
 	if [ "${ext}" = "${f}" ]; then
 		ext=""
 	else
 		ext=".${ext}"
 	fi
-	
+
 	out="${out%"${ext}"}"
 	mkdir -p "${out%/*}"
-	
+
 	# process and build files
 	case "${f}" in
-	*.mdoc) 
+	*.mdoc)
 		if isolder "${f}" "${out}.html"; then
 			lskip "${out}.html"
 		else

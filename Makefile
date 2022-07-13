@@ -13,6 +13,9 @@ E= \
 all:
 	@$(E) sh bin/generate.sh -t $(WWW)
 
+force:
+	@$(E) sh bin/generate.sh -t $(WWW) -f
+
 test:
 	@$(E) sh bin/generate.sh -t test -v
 	
@@ -22,7 +25,7 @@ serv:
 check:
 	@shellcheck                     \
 		-s sh                       \
-		-e 2154,1090                \
+		-e 2154,1090,2310           \
 		-o add-default-case         \
 		-o avoid-nullary-conditions \
 		-o check-set-e-suppressed   \
